@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Online Habit Tracker: Tick Your Days, No Sign-Up</title>
+<meta name="description" content="A free online habit tracker: a row for each habit, a square for each day. Tap for done, again for skipped. No sign-up, saved only in your browser.">
+<link rel="canonical" href="https://quilt.baltajmn.dev/online-habit-tracker/">
+<link rel="alternate" hreflang="en" href="https://quilt.baltajmn.dev/online-habit-tracker/">
+<link rel="alternate" hreflang="es" href="https://quilt.baltajmn.dev/es/habit-tracker-online/">
+<link rel="alternate" hreflang="pt" href="https://quilt.baltajmn.dev/pt/habit-tracker-online/">
+<link rel="alternate" hreflang="x-default" href="https://quilt.baltajmn.dev/online-habit-tracker/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Quilt">
+<meta property="og:title" content="Free Online Habit Tracker: Tick Your Days, No Sign-Up">
+<meta property="og:description" content="A free online habit tracker: a row for each habit, a square for each day. Tap for done, again for skipped. No sign-up, saved only in your browser.">
+<meta property="og:url" content="https://quilt.baltajmn.dev/online-habit-tracker/">
+<meta property="og:image" content="https://quilt.baltajmn.dev/qt/og/maker-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBF8F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17150F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/qt/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/qt/icon-180.png">
+<link rel="preload" href="/qt/caprasimo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/qt/qt.css?v=a8d8740a">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Online habit tracker","url":"https://quilt.baltajmn.dev/online-habit-tracker/","inLanguage":"en","applicationCategory":"LifestyleApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"MobileApplication","name":"Quilt: Habit Tracker & Streaks","operatingSystem":"Android, iOS","applicationCategory":"LifestyleApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"installUrl":"https://play.google.com/store/apps/details?id=com.baltajmn.habit&referrer=utm_source%3Dquilt.baltajmn.dev%26utm_medium%3Dweb%26utm_campaign%3Dqt-ld-en","sameAs":["https://play.google.com/store/apps/details?id=com.baltajmn.habit","https://apps.apple.com/app/id6819302953"]}]}</script>
+<script type="application/json" id="t">{"lang":"en","threads":["#F0AFBE","#F5C39B","#EDDC98","#B6D6AB","#9CD3C7","#A2C3E9","#B4B8EC","#D9AFE6"],"mondayFirst":false,"prevM":"Previous month","nextM":"Next month","prevY":"Previous year","nextY":"Next year","month":"Month","year":"Year","export":"Export PNG","add":"Add a habit","today":"Today","total":"Total","edit":"Edit habit","name":"Name","color":"Color","save":"Done","remove":"Delete habit","confirmRemove":"Delete \"{name}\" and every day ticked for it?","done":"done","skipped":"skipped","empty":"not marked","streak":["1-day streak","2-day streak"],"count":["1 day done","2 days done"],"hint":"Tap a square: once for done, twice for skipped, three times to clear.","yearHint":"The year view is for looking. To mark days, open Month or tap the name of a month.","help":"Keyboard: arrow keys move, Enter or Space marks the day.","saved":"Saved in this browser only. Clearing your browsing data erases it.","noStorage":"This browser isn't saving: export a PNG before you leave.","starters":["Read","Walk","Drink water"],"untitled":"New habit","sheetTitle":"Habit Tracker","file":"habit-tracker","openMonth":"Open {m}"}</script>
+<script src="/qt/maker.js?v=77d19760" defer></script>
+</head>
+<body>
+<header class="wrap top">
+<a class="brand" href="/habit-tracker/"><img src="/qt/icon.svg" alt="" width="32" height="32">Quilt</a>
+<nav aria-label="Quilt">
+<a href="/habit-tracker/">Printables</a>
+<a href="/online-habit-tracker/" aria-current="page">Online tracker</a>
+<a href="/alternatives/">Alternatives</a>
+</nav>
+<span class="langs"><a href="/online-habit-tracker/" hreflang="en" lang="en" aria-current="page"><span aria-hidden="true">EN</span><span class="sr">English</span></a><a href="/es/habit-tracker-online/" hreflang="es" lang="es"><span aria-hidden="true">ES</span><span class="sr">Español</span></a><a href="/pt/habit-tracker-online/" hreflang="pt" lang="pt"><span aria-hidden="true">PT</span><span class="sr">Português</span></a></span>
+</header>
+<main>
+<section class="wrap tool" aria-labelledby="h1">
+<div class="toolbar">
+<h1 id="h1">Online habit tracker</h1>
+<div class="when">
+<button class="icon-btn" id="prev" type="button" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg></button>
+<output id="when" aria-live="polite"></output>
+<button class="icon-btn" id="next" type="button" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>
+</div>
+<div class="views" role="group"><button type="button" id="vm" aria-pressed="true">Month</button><button type="button" id="vy" aria-pressed="false">Year</button></div>
+<button class="btn" id="export" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>Export PNG</button>
+</div>
+<div class="patch peri board">
+<div id="view" aria-describedby="help"></div>
+<p class="status" id="status">Tap a square: once for done, twice for skipped, three times to clear.</p>
+<p class="status" id="help">Keyboard: arrow keys move, Enter or Space marks the day. Saved in this browser only. Clearing your browsing data erases it.</p>
+</div>
+<p class="sr" id="live" aria-live="polite"></p>
+<noscript><p>JavaScript is needed for the online tracker. <a href="/habit-tracker/">Prefer paper? Print the 2027 habit trackers</a></p></noscript>
+<div class="edit" id="edit" popover>
+<form id="editf" method="dialog">
+<label for="ename">Name</label>
+<input type="text" id="ename" maxlength="40" autocomplete="off">
+<fieldset class="swatches"><legend>Color</legend><label><input type="radio" name="color" value="0" aria-label="1"><span style="--t:#F0AFBE"></span></label><label><input type="radio" name="color" value="1" aria-label="2"><span style="--t:#F5C39B"></span></label><label><input type="radio" name="color" value="2" aria-label="3"><span style="--t:#EDDC98"></span></label><label><input type="radio" name="color" value="3" aria-label="4"><span style="--t:#B6D6AB"></span></label><label><input type="radio" name="color" value="4" aria-label="5"><span style="--t:#9CD3C7"></span></label><label><input type="radio" name="color" value="5" aria-label="6"><span style="--t:#A2C3E9"></span></label><label><input type="radio" name="color" value="6" aria-label="7"><span style="--t:#B4B8EC"></span></label><label><input type="radio" name="color" value="7" aria-label="8"><span style="--t:#D9AFE6"></span></label></fieldset>
+<div class="row"><button class="btn danger" type="button" id="eremove">Delete habit</button><button class="btn primary" type="submit">Done</button></div>
+</form>
+</div>
+</section>
+
+<section class="band"><div class="wrap">
+<h2>How it works</h2>
+<ol class="steps" style="grid-template-columns:repeat(3,minmax(0,1fr))"><li><h3>A tap a day</h3><p>Tap a square once for done and twice for skipped; a third tap clears it. Skipped days do not break the streak.</p></li><li><h3>It stays in this browser</h3><p>Nothing is uploaded and there's no account. Your habits are saved on this device, in this browser, until you delete them or clear your browsing data.</p></li><li><h3>See the year, export it</h3><p>The Year view shows each habit as a full year of squares. Export PNG draws it on white, ready to share or print.</p></li></ol>
+<p style="margin-top:32px"><a href="/habit-tracker/">Prefer paper? Print the 2027 habit trackers</a></p>
+</div></section>
+
+<section class="band"><div class="wrap block pair">
+<div class="patch sage app-patch" style="grid-column:1/-1;border-radius:var(--r)">
+<div class="copy">
+<h2>Want it on your phone?</h2>
+<p>Quilt keeps the same year grids on your phone, with home screen widgets and a reminder for each habit.</p>
+<div class="stores">
+<a class="btn" data-store="play" href="https://play.google.com/store/apps/details?id=com.baltajmn.habit&amp;referrer=utm_source%3Dquilt.baltajmn.dev%26utm_medium%3Dweb%26utm_campaign%3Dqt-maker-en">Google Play <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></svg></a>
+<a class="btn" data-store="apple" href="https://apps.apple.com/app/apple-store/id6819302953?pt=129564006&amp;ct=qt-maker-en&amp;mt=8">App Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></svg></a>
+</div>
+</div>
+<img class="phone" src="/qt/img/app-en.webp" alt="Quilt on iPhone: five habits, each with its year of squares" width="720" height="1309" loading="lazy">
+</div>
+</div></section>
+</main>
+<footer><div class="wrap"><span>Quilt: Habit Tracker &amp; Streaks, by Baltasar Jiménez.</span><nav aria-label="Privacy">
+<a href="/habit-tracker/">Printables</a><a href="/online-habit-tracker/">Online tracker</a><a href="/alternatives/">Alternatives</a><a href="/">Privacy</a><a href="/terms.html">Terms</a></nav></div></footer>
+<script>(function(){var q=new URLSearchParams(location.search),c=function(v){return(v||"").toLowerCase().replace(/[^a-z0-9_-]/g,"").slice(0,40)},s=c(q.get("utm_source"));if(!s)return;var m=c(q.get("utm_medium"))||"referral",n=c(q.get("utm_campaign"))||"none";
+document.querySelectorAll('[data-store="play"]').forEach(function(e){var x=new URL(e.href);x.searchParams.set("referrer","utm_source="+s+"&utm_medium="+m+"&utm_campaign="+n);e.href=x});
+document.querySelectorAll('[data-store="apple"]').forEach(function(e){var x=new URL(e.href);x.searchParams.set("ct",(s+"-"+n).slice(0,40));e.href=x})})()</script>
+<script>(function(){var u=navigator.userAgent||"",a=/Android/i.test(u),i=/iPhone|iPad|iPod/i.test(u)||(/Macintosh/i.test(u)&&navigator.maxTouchPoints>1);document.querySelectorAll("[data-store]").forEach(function(e){if((a&&e.dataset.store==="apple")||(i&&e.dataset.store==="play"))e.hidden=true})})()</script>
+</body>
+</html>

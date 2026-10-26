@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T18:00:00Z",
+  "title": "Design System: Quilt web (printables, online tracker, comparisons)",
+  "extensions": {
+    "colorMeta": {
+      "cream": { "role": "neutral", "displayName": "Cream Backing", "canonical": "#FBF8F3", "tonalRamp": ["#2E2A24", "#5E574B", "#A89F8F", "#E3DACB", "#F3ECDF", "#FBF8F3"] },
+      "linen": { "role": "neutral", "displayName": "Linen", "canonical": "#F3ECDF", "tonalRamp": ["#2E2A24", "#5E574B", "#A89F8F", "#E3DACB", "#F3ECDF", "#FBF8F3"] },
+      "ink": { "role": "primary", "displayName": "Warm Ink", "canonical": "#2E2A24", "tonalRamp": ["#2E2A24", "#5E574B", "#8A8174", "#A89F8F", "#E3DACB", "#F3ECDF"] },
+      "link": { "role": "secondary", "displayName": "Deep Sage Link", "canonical": "#2F6B5A", "tonalRamp": ["#1F4A3E", "#2F6B5A", "#6FAE9B", "#9CD3C7", "#CFE8E1"] },
+      "rose": { "role": "tertiary", "displayName": "Rose Cotton", "canonical": "#F0AFBE", "tonalRamp": ["#4E2F37", "#A55F72", "#F0AFBE", "#F8D5DD"] },
+      "peach": { "role": "tertiary", "displayName": "Peach Cotton", "canonical": "#F5C39B", "tonalRamp": ["#4F3A29", "#B07A4D", "#F5C39B", "#FAE0CC"] },
+      "butter": { "role": "tertiary", "displayName": "Butter Cotton", "canonical": "#EDDC98", "tonalRamp": ["#48411F", "#A8964A", "#EDDC98", "#F6EDC8"] },
+      "sage": { "role": "tertiary", "displayName": "Sage Cotton", "canonical": "#B6D6AB", "tonalRamp": ["#33432F", "#6F9A62", "#B6D6AB", "#DBEBD5"] },
+      "mint": { "role": "tertiary", "displayName": "Mint Cotton", "canonical": "#9CD3C7", "tonalRamp": ["#22413B", "#4F9A8A", "#9CD3C7", "#CDE9E3"] },
+      "sky": { "role": "tertiary", "displayName": "Sky Cotton", "canonical": "#A2C3E9", "tonalRamp": ["#283A50", "#5A83B3", "#A2C3E9", "#D1E1F4"] },
+      "peri": { "role": "tertiary", "displayName": "Periwinkle Cotton", "canonical": "#B4B8EC", "tonalRamp": ["#32365C", "#6B72C0", "#B4B8EC", "#D9DBF5"] },
+      "lilac": { "role": "tertiary", "displayName": "Lilac Cotton", "canonical": "#D9AFE6", "tonalRamp": ["#45304F", "#9A66AC", "#D9AFE6", "#ECD7F3"] },
+      "cream-dark": { "role": "neutral", "displayName": "Dark Backing (dark theme)", "canonical": "#17150F", "tonalRamp": ["#17150F", "#211E16", "#3A342A", "#B9B0A0", "#EDE7DC"] }
+    },
+    "typographyMeta": {
+      "numeral": { "displayName": "Giant Year", "purpose": "The year in the printables H1. Caprasimo." },
+      "display": { "displayName": "Page title", "purpose": "H1 on every page. Caprasimo 400." },
+      "headline": { "displayName": "Band heading", "purpose": "H2 for each band. Caprasimo 400." },
+      "title": { "displayName": "Item title", "purpose": "H3 in system sans 600; idea titles in Caprasimo 24px." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs, 68ch max; lede 18.5px." },
+      "label": { "displayName": "Label", "purpose": "Nav, options, buttons, legends, table headers." }
+    },
+    "shadows": [
+      { "name": "paper-shadow", "value": "0 1px 2px rgb(46 42 36 / .08), 0 22px 44px -20px rgb(46 42 36 / .45)", "purpose": "Printable sheet only." },
+      { "name": "edit-popover", "value": "0 2px 6px rgb(0 0 0 / .1), 0 24px 60px -18px rgb(0 0 0 / .45)", "purpose": "Habit edit popover only." },
+      { "name": "pin", "value": "0 0 0 3px #fff, 0 3px 8px rgb(46 42 36 / .35)", "purpose": "Numbered pins on the paper." },
+      { "name": "stitch", "value": "1.5px dashed color-mix(in srgb, var(--ink) 40%, transparent)", "purpose": "Running stitch inset 9px in every patch and between steps and columns." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "All transitions and the sew." },
+      { "name": "land", "value": "320ms", "purpose": "Cotton fills a day square (scale from .35)." },
+      { "name": "sew", "value": "420ms, 120ms delay", "purpose": "Stitch outline draws by clip-path after the fill lands." },
+      { "name": "control", "value": "250ms", "purpose": "Button background and press." },
+      { "name": "reduced-motion", "value": "animation: none; transition: none", "purpose": "Applied to everything under prefers-reduced-motion: reduce." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "640px" },
+      { "name": "table-stack", "value": "720px" },
+      { "name": "month-rotate", "value": "760px" },
+      { "name": "block-stack", "value": "960px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single filled control per view (Download PDF).",
+      "html": "<a class=\"ds-btn ds-primary\" href=\"#\">Download PDF</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border:1.5px solid #2E2A24;border-radius:14px;background:transparent;color:#2E2A24;font:600 16px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:background-color .25s cubic-bezier(.16,1,.3,1),transform .25s cubic-bezier(.16,1,.3,1)}.ds-btn:hover{background:rgb(46 42 36/.08)}.ds-btn:active{transform:translateY(1px)}.ds-primary{min-height:56px;padding:0 28px;font-size:17px;background:#2E2A24;color:#FBF8F3}.ds-primary:hover{background:color-mix(in srgb,#2E2A24 86%,#EDDC98)}.ds-btn:focus-visible{outline:2.5px solid #2E2A24;outline-offset:3px}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Secondary action with 1.5px ink border.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Open the online tracker</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border:1.5px solid #2E2A24;border-radius:14px;background:transparent;color:#2E2A24;font:600 16px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:background-color .25s cubic-bezier(.16,1,.3,1)}.ds-btn:hover{background:rgb(46 42 36/.08)}.ds-btn:focus-visible{outline:2.5px solid #2E2A24;outline-offset:3px}"
+    },
+    {
+      "name": "Option",
+      "kind": "chip",
+      "refersTo": "option",
+      "description": "Radio-backed choice with dashed border; checked is solid ink.",
+      "html": "<span class=\"ds-opts\"><span class=\"ds-o\">A4</span><span class=\"ds-o on\">US Letter</span></span>",
+      "css": ".ds-opts{display:flex;gap:8px}.ds-o{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:11px;border:1.5px dashed rgb(46 42 36/.45);background:rgb(251 248 243/.45);color:#2E2A24;font:600 15px -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif}.ds-o.on{background:#2E2A24;color:#FBF8F3;border:1.5px solid #2E2A24}"
+    },
+    {
+      "name": "Patch",
+      "kind": "card",
+      "refersTo": "patch",
+      "description": "Cotton field with the running stitch inset 9px.",
+      "html": "<div class=\"ds-patch\"><h2>Piece it together</h2><p>One square a day.</p></div>",
+      "css": ".ds-patch{position:relative;width:340px;background:#B4B8EC;border-radius:22px;padding:40px 44px;color:#2E2A24;font:17px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif}.ds-patch::after{content:'';position:absolute;inset:9px;border:1.5px dashed rgb(46 42 36/.4);border-radius:14px;pointer-events:none}.ds-patch h2{margin:0 0 14px;font:400 32px/1.08 Caprasimo,Georgia,serif}.ds-patch p{margin:0}"
+    },
+    {
+      "name": "Day Squares",
+      "kind": "custom",
+      "refersTo": "day",
+      "description": "Empty, done (thread fill plus dashed stitch), skipped (ink dot) and today (ink ring).",
+      "html": "<div class=\"ds-days\"><i></i><i class=\"d\" style=\"--t:#F0AFBE\"></i><i class=\"d\" style=\"--t:#9CD3C7\"></i><i class=\"s\"></i><i class=\"today\"></i></div>",
+      "css": ".ds-days{display:grid;grid-template-columns:repeat(5,34px);gap:4px;padding:16px;background:#B4B8EC;border-radius:22px}.ds-days i{position:relative;aspect-ratio:1;border-radius:6px;background:rgb(251 248 243/.72)}.ds-days i.d{background:var(--t)}.ds-days i.d::after{content:'';position:absolute;inset:3px;border:1.2px dashed rgb(46 42 36/.55);border-radius:4px}.ds-days i.s::after{content:'';position:absolute;left:50%;top:50%;width:7px;height:7px;margin:-3.5px;border-radius:50%;background:#2E2A24}.ds-days i.today{outline:2px solid #2E2A24;outline-offset:1px}"
+    },
+    {
+      "name": "Woven Label",
+      "kind": "chip",
+      "refersTo": "woven-label",
+      "description": "Small meta text chip.",
+      "html": "<span class=\"ds-label\">A4 - 12 months</span>",
+      "css": ".ds-label{display:inline-block;font:600 12.5px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;letter-spacing:.02em;color:#5E574B;padding:7px 11px;border-radius:4px;background:#FBF8F3;border:1px solid #E3DACB;font-variant-numeric:tabular-nums}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quilt Being Pieced",
+    "overview": "Every region is a cotton patch sewn to the next with a visible dashed running stitch, on the app's warm cream backing. The eight pastels of the app own whole regions; the year grids are the print on the patches. Dark mode keeps the same cottons as deep dyed versions.\n\nThree surfaces share the system: printables (Persuade), the online tracker (Operate) and comparison pages (Read).",
+    "keyCharacteristics": [
+      "Whole-region cotton fields; blocks share straight edges and only outer corners round.",
+      "The dashed stitch is the only seam device.",
+      "One filled control per view; everything else outlined in ink.",
+      "Flat except the paper sheet, the phone crop, the pin and the edit popover.",
+      "Warm ink on every pastel in both themes; habit threads stay pastel in dark."
+    ],
+    "rules": [
+      { "name": "The Cotton Owns the Region Rule", "body": "A pastel fills a whole patch or a swatch; it is never a text color, border or tint on a white card.", "section": "colors" },
+      { "name": "The Warm Ink Rule", "body": "Text on every cotton, in both themes, is warm ink; no pure black, no pure white, no cool grey.", "section": "colors" },
+      { "name": "The Never Red Rule", "body": "An empty square is the whole statement of a missed day; no red or warning color anywhere.", "section": "colors" },
+      { "name": "The One Soft Face Rule", "body": "Caprasimo only at weight 400 and only for headings, numerals and the brand; labels, buttons and sentences stay in the system sans.", "section": "typography" },
+      { "name": "The Stitch Is the Seam Rule", "body": "Division between regions is a dashed stitch or a change of cotton, never a solid box or a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do let a cotton own a whole region and put ink text on it.",
+      "Do draw seams as dashed running stitch or change the cotton.",
+      "Do keep empty squares readable in dark by mixing ink into them.",
+      "Do keep tap targets at 44px or more and every color paired with a text label.",
+      "Do keep year numerals and display headings in Caprasimo and everything else in the system sans.",
+      "Do respect prefers-reduced-motion and prefers-color-scheme; keep state in the browser only."
+    ],
+    "donts": [
+      "Don't use pure white or pure black for a page or a patch.",
+      "Don't use red or any warning color for a missed day.",
+      "Don't put kickers or eyebrows above headings; the build has none.",
+      "Don't stack equal white cards in a row.",
+      "Don't add shadows to buttons, patches, rows or squares.",
+      "Don't load third-party scripts or webfonts other than the self-hosted Caprasimo subset."
+    ]
+  }
+}
