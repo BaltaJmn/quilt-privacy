@@ -67,14 +67,16 @@
 <section id="en">
 
 <h1>Quilt Privacy Policy</h1>
-<p class="lede">Last updated: 31 August 2026</p>
+<p class="lede">Last updated: 27 October 2026</p>
 <p class="nav"><strong>English</strong> · <a href="#es">Español</a></p>
 
 <div class="box">
-  <p><strong>The short version.</strong> Quilt has no accounts and no server. Your habits, your
-  history and your streaks are stored only on your device and are never uploaded. The only data that
-  leaves your device is what is needed to know whether you have bought Quilt Pro. There is no
-  advertising, no analytics and no tracking of any kind.</p>
+  <p><strong>The short version.</strong> Quilt works without an account. Your habits, your history
+  and your streaks are stored only on your device and are never uploaded. There is an account only if
+  you choose to share a habit with friends (optional, described below): then, and only then, that one
+  habit and the days you did it are kept on our server. Apart from that, the only data that leaves your
+  device is what is needed to know whether you have bought Quilt Pro. There is no advertising, no
+  analytics and no tracking of any kind.</p>
 </div>
 
 <h2>Who is responsible</h2>
@@ -91,8 +93,8 @@ storage, and in a shared container that lets the home-screen widget read it:</p>
   <li>Your reminder times.</li>
   <li>Whether you have purchased Quilt Pro.</li>
 </ul>
-<p>None of this is sent to us or to anyone else. We have no server, so we could not receive it even
-if we wanted to. Uninstalling the app deletes it.</p>
+<p>None of this is sent to us or to anyone else, with one exception that you choose: a habit you
+share with friends (see below). Uninstalling the app deletes it from your phone.</p>
 
 <h2>What leaves your device</h2>
 
@@ -109,19 +111,53 @@ address or any profile. See
 <p>RevenueCat processes data in the United States. Transfers outside the European Economic Area are
 covered by the European Commission’s Standard Contractual Clauses.</p>
 
+<h3>Sharing a habit with friends (optional account)</h3>
+<p>Everything above works without an account. Only sharing a habit with other people asks you to sign
+in, with <strong>Sign in with Apple</strong> or <strong>Google</strong>, and only when you open that part
+of the app. If you never do, nothing in this section applies to you.</p>
+<p>When you use it we store, on our server: the identifier and the email address that Apple or Google
+give us when you sign in (with Apple you may choose a private relay address), the <strong>name you
+choose to show</strong>, your friend code, your friends and the people you block, and the reports you
+send. For each habit you share or join we store its name, emoji, schedule and target, the people in it
+and, for each of them, the days they did it over the last eight weeks. Only the people in a shared habit
+can see it, and they see your chosen name and which days you did it. Your other habits, your history,
+notes, reminders and statistics stay on your phone: sharing never sends them.</p>
+<p>The server is run by <strong>Supabase, Inc.</strong> as a processor, in the European Union (Frankfurt,
+Germany). The same account system is shared with Chroma, FlowTime and MoodTraker, other apps by the same
+developer: if you sign in to several of them with the same Apple or Google account, it is one account,
+but each app keeps its own name, friends and data, and no app can see another's.</p>
+<p>There is zero tolerance for abusive names and habits. You can report or block anyone from the app,
+and a report sends us an email with the names of the two people involved so that we can act within 24
+hours; it is delivered by <strong>Resend, Inc.</strong> as a processor. See the
+<a href="terms.html">terms of use</a>.</p>
+<p>So that Quilt can tell you when someone invites you to a habit or joins yours, also with the app
+closed, we store a <strong>notification token</strong> for your phone with your account. It is handed to
+<strong>Google</strong> (Firebase Cloud Messaging, on Android) or <strong>Apple</strong> (Apple Push
+Notification service, on iPhone) to deliver each notification, together with its text, which includes the
+chosen name of the person and the name of the shared habit. The token is deleted when you sign out or
+delete your account. If you turn notifications off for Quilt, nothing is shown.</p>
+<p>You can change your name, leave a habit, remove people from a habit you started, block and unblock
+people, sign out and <strong>delete your account at any time from the app</strong> (Settings, Friends,
+Delete account; also at <a href="delete.html">quilt.baltajmn.dev/delete.html</a>). Deleting it removes
+your name, friends, blocks and your place in every shared habit, with the days you marked there, from the
+server at once. If you also use another app of ours with the same account, that app's account is kept
+until you delete it there.</p>
+
 <h3>Nothing else</h3>
 <p>Quilt contains no advertising SDK, no analytics SDK and no crash-reporting SDK. We do not build
 profiles, we do not use remarketing, and we do not sell or share personal information with anyone.
-The app needs an internet connection only to check your purchase status.</p>
+The app needs an internet connection only to check your purchase status and, if you use it, to share
+habits with friends.</p>
 
 <h2>Permissions the app asks for</h2>
 <div class="wrap">
 <table>
   <tr><th>Permission</th><th>Why</th></tr>
-  <tr><td>Notifications</td><td>To show the habit reminders you set. Notifications are generated on your device; nothing is sent through a server.</td></tr>
+  <tr><td>Notifications</td><td>To show the habit reminders you set, which are generated on your device without any server; and, if you share habits, to tell you when someone invites you to one or joins yours.</td></tr>
   <tr><td>Run at startup</td><td>To restore your reminders after the phone reboots. Without it, reminders would silently stop.</td></tr>
-  <tr><td>Internet / network state</td><td>Only to check your purchase status with RevenueCat.</td></tr>
+  <tr><td>Internet / network state</td><td>To check your purchase status with RevenueCat and, if you share habits, to talk to our server.</td></tr>
   <tr><td>In-app billing</td><td>To offer the Quilt Pro purchase through Google Play or the App Store.</td></tr>
+  <tr><td>Receive push messages (Google)</td><td>So that Google's notification service can deliver the invitations of shared habits, if you use them.</td></tr>
 </table>
 <p class="note">The table lists the Android permissions. On iOS the app only ever asks for
 notifications, and for permission to add one image to your photo library when you choose to save a
@@ -139,11 +175,15 @@ that provider’s policy applies to it, not this one.</p>
 <h2>How long data is kept</h2>
 <p>Data on your device is kept until you delete the habit or uninstall the app. Purchase records held
 by RevenueCat and by the app store are kept for as long as those services require in order to honour
-restores and to meet their own legal and tax obligations.</p>
+restores and to meet their own legal and tax obligations. Account data is kept until you delete your
+account. The days of a shared habit are kept for the last eight weeks and older ones are erased every
+night; a person who leaves a shared habit takes their days with them; a shared habit is deleted when its
+last person leaves it; and failed invitation attempts are kept for one hour.</p>
 
 <h2>Children</h2>
 <p>Quilt is not directed at children under 13 and we do not knowingly collect information from them.
-The app has no accounts, no user-generated public content and no social features.</p>
+Sharing a habit asks you to confirm that you are 16 or older before you sign in. Nothing in Quilt is
+public: only the people in a habit you share can see it.</p>
 
 <h2>Your rights under the GDPR</h2>
 <p>If you are in the European Economic Area or the United Kingdom, you have the right to access,
@@ -155,16 +195,21 @@ portability. For the purchase data held by RevenueCat, write to
 <a href="mailto:baltajmn@gmail.com">baltajmn@gmail.com</a> and we will act on your request. Note that we can
 only identify your records if you provide the anonymous identifier or the Google Play or App Store
 order number,
-precisely because we hold nothing that identifies you.</p>
-<p>Legal bases: performance of a contract (delivering the purchase you made) and our legitimate
-interest in preventing fraudulent restores. You also have the right to lodge a complaint with your
+precisely because those records hold nothing that identifies you. If you have an account, you can see
+and correct your data (your name) and delete it (your account) in the app.</p>
+<p>Legal bases: performance of a contract (delivering the purchase you made, and providing shared habits
+when you choose to use them) and our legitimate interest in preventing fraudulent restores and in acting
+on reports to keep shared habits safe. You also have the right to lodge a complaint with your
 supervisory authority. In Spain, the
 <a href="https://www.aepd.es" rel="noopener">Agencia Española de Protección de Datos</a>.</p>
 
 <h2>Your rights under the CCPA / CPRA</h2>
 <p>If you are a California resident: in the last twelve months we have collected the categories
-“identifiers” (an anonymous installation identifier and device identifiers) and “commercial
-information” (your purchase history), for the sole purpose of delivering the product you bought.</p>
+"identifiers" (an anonymous installation identifier and device identifiers; and, only if you share a
+habit with friends, your account identifier, email address and chosen name, and a notification token for
+your phone) and "commercial information" (your purchase history), plus, only if you share a habit, the
+content you choose to share (its name and the days you did it). The purpose is delivering the product you
+bought and, if you use it, shared habits.</p>
 <p>We have <strong>not</strong> sold or shared personal information, and we do not use it for
 cross-context behavioural advertising. We do not knowingly sell the personal information of anyone
 under 16. You have the right to know, to delete, to correct and to non-discrimination for exercising
@@ -186,14 +231,16 @@ top. Material changes will also be described in the app’s release notes in the
 <section id="es" lang="es">
 
 <h1>Quilt, política de privacidad</h1>
-<p class="lede">Última actualización: 31 de agosto de 2026</p>
+<p class="lede">Última actualización: 27 de octubre de 2026</p>
 <p class="nav"><a href="#en">English</a> · <strong>Español</strong></p>
 
 <div class="box">
-  <p><strong>En corto.</strong> Quilt no tiene cuentas ni servidor. Tus hábitos, tu historial y tus
-  rachas se guardan solo en tu dispositivo y no se suben a ningún sitio. Lo único que sale de tu
-  móvil es lo necesario para saber si has comprado Quilt Pro. No hay publicidad, ni analítica, ni
-  seguimiento de ningún tipo.</p>
+  <p><strong>En corto.</strong> Quilt funciona sin cuenta. Tus hábitos, tu historial y tus rachas se
+  guardan solo en tu dispositivo y no se suben a ningún sitio. Solo hay cuenta si decides compartir un
+  hábito con amigos (opcional, se explica abajo): entonces, y solo entonces, ese hábito y los días que
+  lo hiciste se guardan en nuestro servidor. Aparte de eso, lo único que sale de tu móvil es lo
+  necesario para saber si has comprado Quilt Pro. No hay publicidad, ni analítica, ni seguimiento de
+  ningún tipo.</p>
 </div>
 
 <h2>Quién es el responsable</h2>
@@ -212,8 +259,8 @@ privado de la app y en un contenedor compartido que permite al widget leerlo:</p
   <li>Las horas de tus recordatorios.</li>
   <li>Si has comprado Quilt Pro.</li>
 </ul>
-<p>Nada de esto se nos envía ni se envía a terceros. No tenemos servidor, así que no podríamos
-recibirlo aunque quisiéramos. Desinstalar la app lo borra.</p>
+<p>Nada de esto se nos envía ni se envía a terceros, con una excepción que eliges tú: un hábito que
+compartes con amigos (ver abajo). Desinstalar la app lo borra de tu móvil.</p>
 
 <h2>Lo que sí sale de tu dispositivo</h2>
 
@@ -231,19 +278,54 @@ vinculado a tu nombre, tu correo ni ningún perfil. Consulta la
 <p>RevenueCat trata los datos en Estados Unidos. Las transferencias fuera del Espacio Económico
 Europeo están amparadas por las Cláusulas Contractuales Tipo de la Comisión Europea.</p>
 
+<h3>Compartir un hábito con amigos (cuenta opcional)</h3>
+<p>Todo lo anterior funciona sin cuenta. Solo compartir un hábito con otras personas te pide iniciar
+sesión, con <strong>Iniciar sesión con Apple</strong> o <strong>Google</strong>, y solo cuando abres esa
+parte de la app. Si no lo haces nunca, nada de esta sección te afecta.</p>
+<p>Cuando lo usas guardamos en nuestro servidor: el identificador y el correo electrónico que Apple o
+Google nos dan al iniciar sesión (con Apple puedes elegir una dirección de reenvío privada), el
+<strong>nombre que eliges mostrar</strong>, tu código de amistad, tus amigos y las personas que bloqueas,
+y los reportes que envías. De cada hábito que compartes o al que te unes guardamos su nombre, emoji,
+horario y objetivo, las personas que están en él y, de cada una, los días que lo ha hecho en las últimas
+ocho semanas. Solo lo ven las personas de un hábito compartido, y ven tu nombre elegido y qué días lo
+hiciste. Tus demás hábitos, tu historial, tus notas, tus recordatorios y tus estadísticas se quedan en
+tu móvil: compartir nunca los envía.</p>
+<p>El servidor lo presta <strong>Supabase, Inc.</strong> como encargado del tratamiento, en la Unión
+Europea (Fráncfort, Alemania). El sistema de cuentas se comparte con Chroma, FlowTime y MoodTraker, otras
+apps del mismo desarrollador: si inicias sesión en varias con la misma cuenta de Apple o Google, es una
+sola cuenta, pero cada app guarda su propio nombre, amigos y datos, y ninguna puede ver los de otra.</p>
+<p>Hay tolerancia cero con nombres y hábitos abusivos. Puedes reportar o bloquear a cualquiera desde la
+app, y un reporte nos envía un correo con los nombres de las dos personas para que actuemos en 24 horas;
+lo entrega <strong>Resend, Inc.</strong> como encargado del tratamiento. Consulta las
+<a href="terms.html">condiciones de uso</a>.</p>
+<p>Para que Quilt te avise cuando alguien te invita a un hábito o se une al tuyo, también con la app
+cerrada, guardamos con tu cuenta un <strong>identificador de notificaciones</strong> de tu móvil. Se
+entrega a <strong>Google</strong> (Firebase Cloud Messaging, en Android) o a <strong>Apple</strong>
+(servicio de notificaciones push de Apple, en iPhone) para hacer llegar cada aviso, junto con su texto,
+que incluye el nombre elegido de la persona y el nombre del hábito compartido. El identificador se borra
+al cerrar sesión o al borrar tu cuenta. Si desactivas las notificaciones de Quilt, no se muestra nada.</p>
+<p>Puedes cambiar tu nombre, salir de un hábito, quitar a personas de un hábito que empezaste, bloquear y
+desbloquear, cerrar sesión y <strong>borrar tu cuenta cuando quieras desde la app</strong> (Ajustes,
+Amigos, Borrar cuenta; también en <a href="delete.html">quilt.baltajmn.dev/delete.html</a>). Al borrarla
+se eliminan al momento del servidor tu nombre, tus amigos, tus bloqueos y tu lugar en cada hábito
+compartido, con los días que marcaste allí. Si también usas otra app nuestra con la misma cuenta, la
+cuenta de esa app se conserva hasta que la borres allí.</p>
+
 <h3>Nada más</h3>
 <p>Quilt no incluye ningún SDK de publicidad, de analítica ni de informes de fallos. No elaboramos
 perfiles, no usamos remarketing y no vendemos ni compartimos información personal con nadie. La app
-necesita conexión a internet únicamente para comprobar el estado de tu compra.</p>
+necesita conexión a internet únicamente para comprobar el estado de tu compra y, si lo usas, para
+compartir hábitos con amigos.</p>
 
 <h2>Permisos que pide la app</h2>
 <div class="wrap">
 <table>
   <tr><th>Permiso</th><th>Para qué</th></tr>
-  <tr><td>Notificaciones</td><td>Para mostrar los recordatorios que configuras. Se generan en tu dispositivo; no pasan por ningún servidor.</td></tr>
+  <tr><td>Notificaciones</td><td>Para mostrar los recordatorios que configuras, que se generan en tu dispositivo sin ningún servidor; y, si compartes hábitos, para avisarte cuando alguien te invita a uno o se une al tuyo.</td></tr>
   <tr><td>Ejecutar al inicio</td><td>Para recuperar tus recordatorios tras reiniciar el móvil. Sin él dejarían de sonar en silencio.</td></tr>
-  <tr><td>Internet y estado de la red</td><td>Solo para comprobar el estado de tu compra con RevenueCat.</td></tr>
+  <tr><td>Internet y estado de la red</td><td>Para comprobar el estado de tu compra con RevenueCat y, si compartes hábitos, para hablar con nuestro servidor.</td></tr>
   <tr><td>Facturación en la aplicación</td><td>Para ofrecer la compra de Quilt Pro a través de Google Play o la App Store.</td></tr>
+  <tr><td>Recibir mensajes push (Google)</td><td>Para que el servicio de notificaciones de Google entregue las invitaciones de los hábitos compartidos, si los usas.</td></tr>
 </table>
 <p class="note">La tabla recoge los permisos de Android. En iOS la app solo pide notificaciones y,
 cuando decides guardar una imagen compartida, permiso para añadir esa imagen a tu galería.</p>
@@ -260,11 +342,16 @@ nube, se le aplica la política de ese proveedor, no esta.</p>
 <h2>Cuánto tiempo se conservan los datos</h2>
 <p>Los datos de tu dispositivo se conservan hasta que borras el hábito o desinstalas la app. Los
 registros de compra que guardan RevenueCat y la tienda se conservan el tiempo que esos servicios
-necesiten para poder restaurar compras y para cumplir sus propias obligaciones legales y fiscales.</p>
+necesiten para poder restaurar compras y para cumplir sus propias obligaciones legales y fiscales. Los
+datos de la cuenta se conservan hasta que la borras. Los días de un hábito compartido se conservan las
+últimas ocho semanas y los más antiguos se borran cada noche; quien sale de un hábito compartido se
+lleva sus días; un hábito compartido se borra cuando sale la última persona; y los intentos fallidos de
+invitación se conservan una hora.</p>
 
 <h2>Menores</h2>
 <p>Quilt no está dirigida a menores de 13 años y no recogemos conscientemente información de ellos.
-La app no tiene cuentas, ni contenido público generado por usuarios, ni funciones sociales.</p>
+Compartir un hábito te pide confirmar que tienes 16 años o más antes de iniciar sesión. Nada en Quilt
+es público: solo lo ven las personas de un hábito que compartes.</p>
 
 <h2>Tus derechos según el RGPD</h2>
 <p>Si estás en el Espacio Económico Europeo o el Reino Unido, tienes derecho a acceder, rectificar,
@@ -274,17 +361,21 @@ móvil: borrar un hábito lo elimina, desinstalar la app lo borra todo, y la fun
 literalmente portabilidad. Para los datos de compra que guarda RevenueCat, escribe a
 <a href="mailto:baltajmn@gmail.com">baltajmn@gmail.com</a> y atenderemos tu solicitud. Ten en cuenta que solo
 podremos localizar tus registros si nos facilitas el identificador anónimo o el número de pedido de
-Google Play o de la App Store, precisamente porque no guardamos nada que te identifique.</p>
-<p>Bases jurídicas: la ejecución de un contrato (entregarte la compra que hiciste) y nuestro interés
-legítimo en evitar restauraciones fraudulentas. También tienes derecho a presentar una reclamación
+Google Play o de la App Store, precisamente porque esos registros no contienen nada que te identifique.
+Si tienes cuenta, puedes ver y corregir tus datos (tu nombre) y borrarlos (tu cuenta) en la app.</p>
+<p>Bases jurídicas: la ejecución de un contrato (entregarte la compra que hiciste y ofrecerte los
+hábitos compartidos cuando decides usarlos) y nuestro interés legítimo en evitar restauraciones
+fraudulentas y en atender los reportes para mantener seguros los hábitos compartidos. También tienes derecho a presentar una reclamación
 ante tu autoridad de control; en España, la
 <a href="https://www.aepd.es" rel="noopener">Agencia Española de Protección de Datos</a>.</p>
 
 <h2>Tus derechos según la CCPA / CPRA</h2>
 <p>Si resides en California: en los últimos doce meses hemos recogido las categorías
-«identificadores» (un identificador anónimo de instalación e identificadores de dispositivo) e
-«información comercial» (tu historial de compras), con el único fin de entregarte el producto que
-compraste.</p>
+«identificadores» (un identificador anónimo de instalación e identificadores de dispositivo; y, solo si
+compartes un hábito con amigos, el identificador de tu cuenta, tu correo electrónico, tu nombre elegido y
+un identificador de notificaciones de tu móvil) e «información comercial» (tu historial de compras), más,
+solo si compartes un hábito, el contenido que eliges compartir (su nombre y los días que lo hiciste). La
+finalidad es entregarte el producto que compraste y, si lo usas, los hábitos compartidos.</p>
 <p><strong>No</strong> hemos vendido ni compartido información personal, y no la usamos para
 publicidad conductual entre contextos. No vendemos conscientemente información personal de menores de
 16 años. Tienes derecho a saber, a suprimir, a corregir y a no sufrir discriminación por ejercer esos
