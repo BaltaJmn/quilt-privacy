@@ -52,7 +52,7 @@ export const HUB = {
     tableH: 'The five apps side by side',
     quilt: {
       line: 'A habit tracker with a full-year grid for each habit, skipped days, free widgets and no account. Suits you if you want something quiet on Android and iPhone.',
-      price: 'Free for 3 habits. Pro: $1.99 once or $0.99 a month',
+      price: 'Free for 3 habits. Pro: $3.99 once or $1.99 a month',
       account: 'None',
       platforms: 'Android, iPhone',
     },
@@ -66,7 +66,7 @@ export const HUB = {
     tableH: 'Las cinco apps, lado a lado',
     quilt: {
       line: 'Una app de hábitos con una rejilla del año entero para cada hábito, días saltados, widgets gratis y sin cuenta. Te va si quieres algo tranquilo en Android y iPhone.',
-      price: 'Gratis con 3 hábitos. Pro: 1,99 € una vez o 0,99 € al mes',
+      price: 'Gratis con 3 hábitos. Pro: 4,99 € una vez o 2,49 € al mes',
       account: 'Ninguna',
       platforms: 'Android, iPhone',
     },
@@ -105,7 +105,7 @@ export const COMPARE = {
         ['Export', '+ The whole history as JSON (and back in), plus CSV, free', '+ Task history as CSV, user data as JSON or XML, from Settings'],
         ['Ads', '+ None', 'Google Play marks it "Contains ads"'],
         ['Data collected', '+ No usage analytics', 'App Store privacy label, "Data Linked to You": Contact Info, User Content, Usage Data, Diagnostics'],
-        ['Price', 'Free for 3 habits. Pro: $1.99 once or $0.99 a month', 'Free to use. Optional subscription: $4.99 a month or $47.99 a year on the US App Store'],
+        ['Price', 'Free for 3 habits. Pro: $3.99 once or $1.99 a month', 'Free to use. Optional subscription: $4.99 a month or $47.99 a year on the US App Store'],
         ['Platforms', 'Android, iPhone', 'Android, iPhone, iPad, Wear OS, web'],
       ],
       betterH: 'Where Habitica is the better pick',
@@ -116,7 +116,7 @@ export const COMPARE = {
       ],
       faqH: 'Questions',
       faq: [
-        ['Is Habitica free?', 'Yes. Its App Store page says it can be fully enjoyed for free, and the subscription is optional. On October 26, 2026 the US App Store listed it at $4.99 for 1 month and $47.99 for 12 months, with gem packs as separate purchases from $0.99. Quilt is free for 3 habits, and Pro is $1.99 once or $0.99 a month.'],
+        ['Is Habitica free?', 'Yes. Its App Store page says it can be fully enjoyed for free, and the subscription is optional. On October 26, 2026 the US App Store listed it at $4.99 for 1 month and $47.99 for 12 months, with gem packs as separate purchases from $0.99. Quilt is free for 3 habits, and Pro is $3.99 once or $1.99 a month.'],
         ['Is Habitica open source?', 'Yes. Its code is GPL v3 licensed, and so is the Android app; its art and some other assets have different licences. Loop Habit Tracker is another free, open source option, on Android only.'],
         ['Is there a Habitica alternative with no account?', 'Quilt has no account and no sign-up. Everything lives in a file on your phone, and its only connection is to process a purchase. Habitica is an online service with registration, login and sync, so it works differently.'],
         ["Can I move my Habitica data to Quilt?", "Not automatically. Habitica exports your task history as CSV and your user data as JSON or XML from Settings, but Quilt imports only its own JSON backup and cannot read other apps' files. If you want past days in Quilt, you can tap them on the year grid."],
@@ -156,7 +156,7 @@ export const COMPARE = {
         ['Exportar', '+ Todo el historial en JSON (y para volver a importarlo) y en CSV, gratis', '+ Historial de tareas en CSV y datos de usuario en JSON o XML, desde Ajustes'],
         ['Anuncios', '+ Ninguno', 'Google Play la marca con "Contiene anuncios"'],
         ['Datos que recoge', '+ Sin analítica de uso', 'Etiqueta de privacidad de la App Store, datos vinculados a ti: información de contacto, contenido del usuario, datos de uso y diagnósticos'],
-        ['Precio', 'Gratis con 3 hábitos. Pro: 1,99 € una vez o 0,99 € al mes', 'Gratis. Suscripción opcional: 5,49 € al mes o 53,99 € al año en la App Store de España'],
+        ['Precio', 'Gratis con 3 hábitos. Pro: 4,99 € una vez o 2,49 € al mes', 'Gratis. Suscripción opcional: 5,49 € al mes o 53,99 € al año en la App Store de España'],
         ['Plataformas', 'Android, iPhone', 'Android, iPhone, iPad, Wear OS, web'],
       ],
       betterH: 'Cuándo es mejor Habitica',
@@ -167,7 +167,7 @@ export const COMPARE = {
       ],
       faqH: 'Preguntas',
       faq: [
-        ['¿Habitica es gratis?', 'Sí. Su ficha de la App Store dice que se puede disfrutar entera gratis, y la suscripción es opcional. El 26 de octubre de 2026, la App Store de España la listaba a 5,49 € por 1 mes y 53,99 € por 12 meses, y los paquetes de gemas son compras aparte, desde 0,99 €. Quilt es gratis con 3 hábitos, y Pro cuesta 1,99 € una vez o 0,99 € al mes.'],
+        ['¿Habitica es gratis?', 'Sí. Su ficha de la App Store dice que se puede disfrutar entera gratis, y la suscripción es opcional. El 26 de octubre de 2026, la App Store de España la listaba a 5,49 € por 1 mes y 53,99 € por 12 meses, y los paquetes de gemas son compras aparte, desde 0,99 €. Quilt es gratis con 3 hábitos, y Pro cuesta 4,99 € una vez o 2,49 € al mes.'],
         ['¿Habitica es de código abierto?', 'Sí. Su código tiene licencia GPL v3, y la app de Android también; las ilustraciones y algunos otros recursos tienen otras licencias. Loop Habit Tracker es otra opción gratis y de código abierto, solo para Android.'],
         ['¿Hay una alternativa a Habitica sin cuenta?', 'Quilt no tiene cuenta ni registro. Todo vive en un archivo en tu móvil y su única conexión es para procesar una compra. Habitica es un servicio en línea con registro, inicio de sesión y sincronización, así que funciona de otra manera.'],
         ['¿Puedo pasar mis datos de Habitica a Quilt?', 'No de forma automática. Habitica exporta tu historial de tareas en CSV y tus datos de usuario en JSON o XML desde Ajustes, pero Quilt solo importa su propia copia en JSON y no puede leer archivos de otras apps. Si quieres tus días pasados en Quilt, puedes pulsarlos en la rejilla del año.'],
@@ -188,7 +188,7 @@ export const COMPARE = {
     en: {
       nav: 'Streaks',
       title: 'Streaks Alternative for Android and iPhone: Quilt',
-      desc: 'Streaks has no Android version. Quilt is a habit tracker for Android and iPhone: free for 3 habits, Pro $1.99 once, no account. Compared honestly with Streaks.',
+      desc: 'Streaks has no Android version. Quilt is a habit tracker for Android and iPhone: free for 3 habits, Pro $3.99 once, no account. Compared honestly with Streaks.',
       h1: 'A Streaks alternative for Android and iPhone',
       lede: 'Streaks is a habit tracker for iPhone, iPad, Apple Watch, Mac and Apple Vision Pro; there is no Android version. It costs $5.99 once, with no subscription, no ads and no account. Quilt is an option if you use Android, or both, or would rather start free. Here is how the two compare.',
       fitUs: [
@@ -204,7 +204,7 @@ export const COMPARE = {
       tableH: 'Quilt and Streaks side by side',
       rows: [
         ['Platforms', 'Android, iPhone', 'iPhone, iPad, Apple Watch, Mac and Apple Vision Pro; no Android version'],
-        ['Price', 'Free for 3 habits. Pro: $1.99 once or $0.99 a month', '$5.99 once on the US App Store, with no subscription'],
+        ['Price', 'Free for 3 habits. Pro: $3.99 once or $1.99 a month', '$5.99 once on the US App Store, with no subscription'],
         ['How many habits', 'Free: 3. Pro: unlimited', 'Up to 24 tasks'],
         ['Account and ads', '+ None of either', '+ None of either'],
         ['Widgets', '+ Interactive, in three sizes, free, on both platforms; on iPhone also on the lock screen', '+ Home Screen and interactive widgets, and timers on the Lock Screen'],
@@ -225,7 +225,7 @@ export const COMPARE = {
       faqH: 'Questions',
       faq: [
         ['Is there a Streaks for Android?', 'No. Streaks lists iPhone, iPad, Apple Watch, Mac and Apple Vision Pro as the devices it works on, and does not mention Android. Quilt is a habit tracker for Android and iPhone, so it is an option if you want one app on both.'],
-        ['Is Streaks free?', 'No. On October 26, 2026 the US App Store price was $5.99, paid once, with no subscription and no in-app purchases. Quilt is free for 3 habits, every widget, every reminder and the full export; Pro adds unlimited habits and the full color palette, $1.99 once or $0.99 a month. They are not like for like: Streaks has no free tier, and its price covers up to 24 tasks on every Apple device.'],
+        ['Is Streaks free?', 'No. On October 26, 2026 the US App Store price was $5.99, paid once, with no subscription and no in-app purchases. Quilt is free for 3 habits, every widget, every reminder and the full export; Pro adds unlimited habits and the full color palette, $3.99 once or $1.99 a month. They are not like for like: Streaks has no free tier, and its price covers up to 24 tasks on every Apple device.'],
         ['Is Streaks worth it?', 'If you use Apple Health, an Apple Watch or a Mac, or want iCloud sync, those are things Streaks does and Quilt does not. If what you want is a full-year grid for each habit, free widgets, Android as well as iPhone and a free start, that is what Quilt is built around.'],
         ['Can I move my Streaks data to Quilt?', "Not automatically. Streaks exports a CSV and a .streaks backup, but Quilt imports only its own JSON backup and cannot read other apps' files. To bring a past year over, tap the days on Quilt's year grid."],
       ],
@@ -240,7 +240,7 @@ export const COMPARE = {
     es: {
       nav: 'Streaks',
       title: 'Alternativa a Streaks para Android y iPhone: Quilt',
-      desc: 'Streaks no tiene versión para Android. Quilt es una app de hábitos para Android y iPhone: gratis con 3 hábitos, Pro 1,99 € una vez, sin cuenta. Comparadas con datos.',
+      desc: 'Streaks no tiene versión para Android. Quilt es una app de hábitos para Android y iPhone: gratis con 3 hábitos, Pro 4,99 € una vez, sin cuenta. Comparadas con datos.',
       h1: 'Una alternativa a Streaks para Android y iPhone',
       lede: 'Streaks es una app de hábitos para iPhone, iPad, Apple Watch, Mac y Apple Vision Pro; no existe versión para Android. Cuesta 6,99 € una vez, sin suscripción, sin anuncios y sin cuenta. Quilt es una opción si usas Android, o los dos, o prefieres empezar gratis. Así se comparan.',
       fitUs: [
@@ -256,7 +256,7 @@ export const COMPARE = {
       tableH: 'Quilt y Streaks, lado a lado',
       rows: [
         ['Plataformas', 'Android, iPhone', 'iPhone, iPad, Apple Watch, Mac y Apple Vision Pro; sin versión para Android'],
-        ['Precio', 'Gratis con 3 hábitos. Pro: 1,99 € una vez o 0,99 € al mes', '6,99 € una vez en la App Store de España, sin suscripción'],
+        ['Precio', 'Gratis con 3 hábitos. Pro: 4,99 € una vez o 2,49 € al mes', '6,99 € una vez en la App Store de España, sin suscripción'],
         ['Cuántos hábitos', 'Gratis: 3. Pro: ilimitados', 'Hasta 24 tareas'],
         ['Cuenta y anuncios', '+ Ninguna de las dos cosas', '+ Ninguna de las dos cosas'],
         ['Widgets', '+ Interactivos, en tres tamaños, gratis, en las dos plataformas; en iPhone, también en la pantalla de bloqueo', '+ Widgets en la pantalla de inicio e interactivos, y temporizadores en la pantalla de bloqueo'],
@@ -277,7 +277,7 @@ export const COMPARE = {
       faqH: 'Preguntas',
       faq: [
         ['¿Existe Streaks para Android?', 'No. Streaks lista iPhone, iPad, Apple Watch, Mac y Apple Vision Pro como los dispositivos donde funciona, y no menciona Android. Quilt es una app de hábitos para Android y iPhone, así que es una opción si quieres una sola app para los dos.'],
-        ['¿Streaks es gratis?', 'No. El 26 de octubre de 2026 su precio en la App Store de España era de 6,99 €, pagado una vez, sin suscripción ni compras dentro de la app. Quilt es gratis con 3 hábitos, todos los widgets, todos los recordatorios y la exportación completa; Pro añade hábitos ilimitados y la paleta de colores completa, por 1,99 € una vez o 0,99 € al mes. No son comparables al cien por cien: Streaks no tiene versión gratis, y su precio cubre hasta 24 tareas en todos los dispositivos de Apple.'],
+        ['¿Streaks es gratis?', 'No. El 26 de octubre de 2026 su precio en la App Store de España era de 6,99 €, pagado una vez, sin suscripción ni compras dentro de la app. Quilt es gratis con 3 hábitos, todos los widgets, todos los recordatorios y la exportación completa; Pro añade hábitos ilimitados y la paleta de colores completa, por 4,99 € una vez o 2,49 € al mes. No son comparables al cien por cien: Streaks no tiene versión gratis, y su precio cubre hasta 24 tareas en todos los dispositivos de Apple.'],
         ['¿Merece la pena Streaks?', 'Si usas Salud, un Apple Watch o un Mac, o quieres sincronizar con iCloud, eso lo hace Streaks y Quilt no. Si lo que quieres es una rejilla del año entero para cada hábito, widgets gratis, Android además de iPhone y empezar gratis, en eso se basa Quilt.'],
         ['¿Puedo pasar mis datos de Streaks a Quilt?', 'No de forma automática. Streaks exporta un CSV y una copia .streaks, pero Quilt solo importa su propia copia en JSON y no puede leer archivos de otras apps. Para traer un año pasado, pulsa los días en la rejilla de Quilt.'],
       ],
@@ -313,7 +313,7 @@ export const COMPARE = {
       tableH: 'Quilt and Loop Habit Tracker side by side',
       rows: [
         ['Platforms', 'Android, iPhone', 'Android only: Google Play and F-Droid, with no official iPhone app'],
-        ['Price', 'Free for 3 habits. Pro: $1.99 once or $0.99 a month', 'Free: every feature for everyone, with no in-app purchases'],
+        ['Price', 'Free for 3 habits. Pro: $3.99 once or $1.99 a month', 'Free: every feature for everyone, with no in-app purchases'],
         ['Habits', 'Free: 3. Pro: unlimited', '+ No limit'],
         ['Account and ads', '+ None of either', '+ None of either'],
         ['How history looks', 'A full-year grid for each habit: one square per day, months labeled', 'History charts you can scroll back through'],
@@ -334,7 +334,7 @@ export const COMPARE = {
       faqH: 'Questions',
       faq: [
         ['Is there a Loop Habit Tracker for iPhone?', 'No. Its README and its website link only to Google Play and F-Droid, so there is no official iPhone app (checked October 26, 2026). A search on the App Store finds an app with a similar name; it is not the Android Loop Habit Tracker. Quilt is a different app that runs on iPhone and Android.'],
-        ['Is Loop Habit Tracker free?', 'Yes, completely. Its README says all features are available to all users and there are no in-app purchases, and it has no ads. Quilt is free for 3 habits; Pro is $1.99 once or $0.99 a month.'],
+        ['Is Loop Habit Tracker free?', 'Yes, completely. Its README says all features are available to all users and there are no in-app purchases, and it has no ads. Quilt is free for 3 habits; Pro is $3.99 once or $1.99 a month.'],
         ['Is Loop Habit Tracker open source?', 'Yes. The code is under the GPL-3.0 licence on GitHub, and the app is also on F-Droid.'],
         ['Can I move my Loop data to Quilt?', "Not automatically. Loop exports CSV and SQLite files; Quilt imports only its own JSON backup and cannot read other apps' files. You can fill in past days by tapping them on the year grid. The two apps do not sync, so if you use both, their data stays apart."],
       ],
@@ -365,7 +365,7 @@ export const COMPARE = {
       tableH: 'Quilt y Loop Habit Tracker, lado a lado',
       rows: [
         ['Plataformas', 'Android, iPhone', 'Solo Android: Google Play y F-Droid, sin app oficial para iPhone'],
-        ['Precio', 'Gratis con 3 hábitos. Pro: 1,99 € una vez o 0,99 € al mes', 'Gratis: todas las funciones para todo el mundo, sin compras dentro de la app'],
+        ['Precio', 'Gratis con 3 hábitos. Pro: 4,99 € una vez o 2,49 € al mes', 'Gratis: todas las funciones para todo el mundo, sin compras dentro de la app'],
         ['Hábitos', 'Gratis: 3. Pro: ilimitados', '+ Sin límite'],
         ['Cuenta y anuncios', '+ Ninguna de las dos cosas', '+ Ninguna de las dos cosas'],
         ['Cómo se ve el historial', 'Una rejilla del año entero para cada hábito: un cuadrado por día, con los meses rotulados', 'Gráficos de historial por los que puedes retroceder'],
@@ -386,7 +386,7 @@ export const COMPARE = {
       faqH: 'Preguntas',
       faq: [
         ['¿Hay Loop Habit Tracker para iPhone?', 'No. Su README y su web enlazan solo a Google Play y F-Droid, así que no hay app oficial para iPhone (comprobado el 26 de octubre de 2026). Si buscas en la App Store, sale una app con un nombre parecido; no es el Loop Habit Tracker de Android. Quilt es otra app, que funciona en iPhone y Android.'],
-        ['¿Loop Habit Tracker es gratis?', 'Sí, del todo. Su README dice que todas las funciones están disponibles para todo el mundo y que no hay compras dentro de la app, y no tiene anuncios. Quilt es gratis con 3 hábitos; Pro cuesta 1,99 € una vez o 0,99 € al mes.'],
+        ['¿Loop Habit Tracker es gratis?', 'Sí, del todo. Su README dice que todas las funciones están disponibles para todo el mundo y que no hay compras dentro de la app, y no tiene anuncios. Quilt es gratis con 3 hábitos; Pro cuesta 4,99 € una vez o 2,49 € al mes.'],
         ['¿Loop Habit Tracker es de código abierto?', 'Sí. El código tiene licencia GPL-3.0 en GitHub, y la app también está en F-Droid.'],
         ['¿Puedo pasar mis datos de Loop a Quilt?', 'No de forma automática. Loop exporta archivos CSV y SQLite; Quilt solo importa su propia copia en JSON y no puede leer archivos de otras apps. Puedes rellenar los días pasados pulsándolos en la rejilla del año. Las dos apps no se sincronizan, así que, si usas las dos, sus datos van por separado.'],
       ],
@@ -422,7 +422,7 @@ export const COMPARE = {
       tableH: 'Quilt and HabitKit side by side',
       rows: [
         ['Platforms', 'Android, iPhone', 'Android, iPhone, iPad; no Apple Watch app'],
-        ['Price', 'Free for 3 habits. Pro: $1.99 once or $0.99 a month', 'Free for 4 habits. Pro is sold monthly, yearly or once as Lifetime; the store shows the current price'],
+        ['Price', 'Free for 3 habits. Pro: $3.99 once or $1.99 a month', 'Free for 4 habits. Pro is sold monthly, yearly or once as Lifetime; the store shows the current price'],
         ['Habits on the free plan', '3', '4'],
         ['Widgets', '+ Free, interactive, in three sizes, on both platforms', 'Home screen widgets are part of Pro'],
         ['Year view', '+ A full-year grid for each habit', '+ A year-long heatmap, with today at the right-hand edge'],
@@ -443,7 +443,7 @@ export const COMPARE = {
       faqH: 'Questions',
       faq: [
         ['Is HabitKit free?', 'Yes, up to 4 habits, for as long as you like and with no trial clock. The free plan includes Yes/No, Count and Measure habits, notes, categories, quit habits, one reminder per habit, backups and export. Pro adds unlimited habits, home screen widgets, charts and statistics, up to three reminders per habit and dashboard customization. It is sold monthly, yearly or once as Lifetime; the store shows the current price.'],
-        ['Is there a HabitKit alternative with free widgets?', 'Quilt: every widget is free, in three sizes, on Android and iPhone; on iPhone also on the lock screen, and on Android there is a quick settings tile. Free is 3 habits, one fewer than HabitKit. Pro is $1.99 once or $0.99 a month and adds unlimited habits and the full color palette.'],
+        ['Is there a HabitKit alternative with free widgets?', 'Quilt: every widget is free, in three sizes, on Android and iPhone; on iPhone also on the lock screen, and on Android there is a quick settings tile. Free is 3 habits, one fewer than HabitKit. Pro is $3.99 once or $1.99 a month and adds unlimited habits and the full color palette.'],
         ['Does HabitKit have skipped days?', 'Not as a feature. Its help center says it has no dedicated skip-day, rest-day or streak-freeze feature, and suggests weekly or monthly goals, or no streak goal, as workarounds. In Quilt you press and hold a day to skip it; it counts as neither a miss nor a win, and your streak and percentage stay as they were.'],
         ['Can I move my HabitKit data to Quilt?', "Not automatically. HabitKit exports one JSON file, and Quilt imports only its own JSON backup, so it cannot read HabitKit's file. To bring a year over, tap the days on Quilt's grid."],
       ],
@@ -474,7 +474,7 @@ export const COMPARE = {
       tableH: 'Quilt y HabitKit, lado a lado',
       rows: [
         ['Plataformas', 'Android, iPhone', 'Android, iPhone, iPad; sin app para Apple Watch'],
-        ['Precio', 'Gratis con 3 hábitos. Pro: 1,99 € una vez o 0,99 € al mes', 'Gratis con 4 hábitos. Pro se vende al mes, al año o una sola vez como Lifetime; la tienda muestra el precio actual'],
+        ['Precio', 'Gratis con 3 hábitos. Pro: 4,99 € una vez o 2,49 € al mes', 'Gratis con 4 hábitos. Pro se vende al mes, al año o una sola vez como Lifetime; la tienda muestra el precio actual'],
         ['Hábitos en el plan gratis', '3', '4'],
         ['Widgets', '+ Gratis, interactivos, en tres tamaños y en las dos plataformas', 'Los widgets de la pantalla de inicio forman parte de Pro'],
         ['Vista del año', '+ Una rejilla del año entero para cada hábito', '+ Un mapa de calor de un año, con hoy en el borde derecho'],
@@ -495,7 +495,7 @@ export const COMPARE = {
       faqH: 'Preguntas',
       faq: [
         ['¿HabitKit es gratis?', 'Sí, hasta 4 hábitos, todo el tiempo que quieras y sin periodo de prueba. El plan gratis incluye hábitos de sí/no, Count y Measure, notas, categorías, hábitos para dejar algo, un recordatorio por hábito, copias y exportación. Pro añade hábitos ilimitados, widgets de la pantalla de inicio, gráficos y estadísticas, hasta tres recordatorios por hábito y personalización del panel. Se vende al mes, al año o una sola vez como Lifetime; la tienda muestra el precio actual.'],
-        ['¿Hay una alternativa a HabitKit con widgets gratis?', 'Quilt: todos los widgets son gratis, en tres tamaños, en Android y iPhone; en iPhone también en la pantalla de bloqueo, y en Android hay un mosaico de ajustes rápidos. Gratis son 3 hábitos, uno menos que HabitKit. Pro cuesta 1,99 € una vez o 0,99 € al mes y añade hábitos ilimitados y la paleta de colores completa.'],
+        ['¿Hay una alternativa a HabitKit con widgets gratis?', 'Quilt: todos los widgets son gratis, en tres tamaños, en Android y iPhone; en iPhone también en la pantalla de bloqueo, y en Android hay un mosaico de ajustes rápidos. Gratis son 3 hábitos, uno menos que HabitKit. Pro cuesta 4,99 € una vez o 2,49 € al mes y añade hábitos ilimitados y la paleta de colores completa.'],
         ['¿HabitKit tiene días saltados?', 'No como función. Su centro de ayuda dice que no tiene una función propia de días saltados, de descanso ni de congelar la racha, y propone objetivos semanales o mensuales, o ningún objetivo de racha, como solución. En Quilt mantienes pulsado un día para saltarlo; no cuenta ni como fallo ni como acierto, y tu racha y tu porcentaje se quedan como estaban.'],
         ['¿Puedo pasar mis datos de HabitKit a Quilt?', 'No de forma automática. HabitKit exporta un archivo JSON y Quilt solo importa su propia copia en JSON, así que no puede leer el de HabitKit. Para traer un año, pulsa los días en la rejilla de Quilt.'],
       ],
