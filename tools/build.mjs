@@ -1,6 +1,6 @@
 // Builds the Quilt web pages: habit tracker printables and online tracker (en, es, pt), the comparison
-// pages and their index (en, es), sitemap.xml and robots.txt. The privacy policy (index.html) and the terms
-// are hand-written and keep their URLs. The pages are plain files committed to the repo; run this after
+// pages and their index (en, es), sitemap.xml and robots.txt. The privacy policy (index.html), the terms, the
+// delete page and the legal notice are hand-written and keep their URLs. The pages are plain files committed to the repo; run this after
 // changing a text here or in compare.mjs.
 //
 //   node tools/sheets.mjs && node tools/build.mjs && node tools/og.mjs && node tools/check.mjs
@@ -19,7 +19,7 @@ const TODAY = new Date().toISOString().slice(0, 10)
 // Cloudflare and browsers keep CSS and JS for a while: the URL changes when the file does.
 const v = (p) => `${p}?v=${createHash('md5').update(readFileSync(join(ROOT, p))).digest('hex').slice(0, 8)}`
 
-// Campaign tokens: the app has no analytics, so the stores are the only place a web install shows up.
+// Campaign tokens: the app has no analytics of its own, so the stores are the only place a web install shows up.
 const APPLE_PT = '129564006' // provider ID of the developer account, as App Store Connect puts it in its campaign links
 const play = (c) => `https://play.google.com/store/apps/details?id=com.baltajmn.habit&referrer=${encodeURIComponent(`utm_source=quilt.baltajmn.dev&utm_medium=web&utm_campaign=${c}`)}`
 const apple = (c) => `https://apps.apple.com/app/apple-store/id6819302953?pt=${APPLE_PT}&ct=${c}&mt=8`
@@ -60,7 +60,7 @@ const T = {
       miniNote: 'Two weeks in the online tracker',
       appH: 'Or keep the quilt on your phone',
       appP1: 'Quilt is a habit tracker built on this same grid. Each habit is a full year of squares, so you see the month you slipped and the weeks you did not.',
-      appP2: 'Skipped days (ill, away, resting) do not break the streak. No account and no ads; free for 3 habits, with every widget.',
+      appP2: 'Skipped days (ill, away, resting) do not break the streak. No account needed; free for 3 habits, with every widget and one banner ad that Pro removes.',
       appAlt: 'Quilt on iPhone: five habits, each with its year of squares',
       ideasH: `Habit ideas for ${YEAR}`,
       ideasP: 'Start with two or three. A habit you can still do on a bad day lasts longer than a big one.',
@@ -114,7 +114,7 @@ const T = {
       file: 'habit-tracker',
       openMonth: (m) => `Open ${m}`,
     },
-    nav: { print: 'Printables', maker: 'Online tracker', hub: 'Alternatives', privacy: 'Privacy', terms: 'Terms' },
+    nav: { print: 'Printables', maker: 'Online tracker', hub: 'Alternatives', privacy: 'Privacy', terms: 'Terms', legal: 'Legal notice' },
     footer: 'Quilt: Habit Tracker & Streaks, by Baltasar Jiménez.',
   },
   es: {
@@ -142,7 +142,7 @@ const T = {
       miniNote: 'Dos semanas en el habit tracker online',
       appH: 'O lleva la colcha en el móvil',
       appP1: 'Quilt es una app de hábitos hecha sobre esta misma rejilla. Cada hábito es un año entero de cuadrados: ves el mes en que flojeaste y las semanas en que no.',
-      appP2: 'Los días saltados (enfermo, de viaje, descansando) no rompen la racha. Sin cuenta y sin anuncios; gratis con 3 hábitos y todos los widgets.',
+      appP2: 'Los días saltados (enfermo, de viaje, descansando) no rompen la racha. No hace falta cuenta; gratis con 3 hábitos y todos los widgets, con un banner de anuncios que Pro quita.',
       appAlt: 'Quilt en el iPhone: cinco hábitos, cada uno con su año de cuadrados',
       ideasH: `Ideas de hábitos para ${YEAR}`,
       ideasP: 'Empieza con dos o tres. Un hábito que puedes cumplir hasta en un mal día dura más que uno grande.',
@@ -196,7 +196,7 @@ const T = {
       file: 'mis-habitos',
       openMonth: (m) => `Abrir ${m}`,
     },
-    nav: { print: 'Plantillas', maker: 'Tracker online', hub: 'Alternativas', privacy: 'Privacidad', terms: 'Términos' },
+    nav: { print: 'Plantillas', maker: 'Tracker online', hub: 'Alternativas', privacy: 'Privacidad', terms: 'Términos', legal: 'Aviso legal' },
     footer: 'Quilt: Habit Tracker & Streaks, de Baltasar Jiménez.',
   },
   pt: {
@@ -224,7 +224,7 @@ const T = {
       miniNote: 'Duas semanas no habit tracker online',
       appH: 'Ou leve a colcha no celular',
       appP1: 'O Quilt é um app de hábitos feito sobre esta mesma grade. Cada hábito é um ano inteiro de quadradinhos: você vê o mês em que vacilou e as semanas em que não.',
-      appP2: 'Dias pulados (doente, viajando, descansando) não quebram a sequência. Sem conta e sem anúncios; grátis com 3 hábitos e todos os widgets.',
+      appP2: 'Dias pulados (doente, viajando, descansando) não quebram a sequência. Não precisa de conta; grátis com 3 hábitos e todos os widgets, com um banner de anúncios que o Pro remove.',
       appAlt: 'Quilt no iPhone: cinco hábitos, cada um com seu ano de quadradinhos',
       ideasH: `Ideias de hábitos para ${YEAR}`,
       ideasP: 'Comece com dois ou três. Um hábito que dá para cumprir até num dia ruim dura mais que um grande.',
@@ -278,7 +278,7 @@ const T = {
       file: 'meus-habitos',
       openMonth: (m) => `Abrir ${m}`,
     },
-    nav: { print: 'Modelos', maker: 'Tracker online', hub: 'Alternativas', privacy: 'Privacidade', terms: 'Termos' },
+    nav: { print: 'Modelos', maker: 'Tracker online', hub: 'Alternativas', privacy: 'Privacidade', terms: 'Termos', legal: 'Aviso legal' },
     footer: 'Quilt: Habit Tracker & Streaks, de Baltasar Jiménez.',
   },
 }
@@ -360,7 +360,7 @@ document.querySelectorAll('[data-store="apple"]').forEach(function(e){var x=new 
 function footer(lang) {
   const t = T[lang]
   return `<footer><div class="wrap"><span>${esc(t.footer)}</span><nav aria-label="${esc(t.nav.privacy)}">
-<a href="${PAGES.print[lang]}">${t.nav.print}</a><a href="${PAGES.maker[lang]}">${t.nav.maker}</a>${PAGES.hub[lang] ? `<a href="${PAGES.hub[lang]}">${t.nav.hub}</a>` : ''}<a href="/${lang === 'es' ? '#es' : ''}">${t.nav.privacy}</a><a href="/terms.html">${t.nav.terms}</a></nav></div></footer>`
+<a href="${PAGES.print[lang]}">${t.nav.print}</a><a href="${PAGES.maker[lang]}">${t.nav.maker}</a>${PAGES.hub[lang] ? `<a href="${PAGES.hub[lang]}">${t.nav.hub}</a>` : ''}<a href="/${lang === 'es' ? '#es' : ''}">${t.nav.privacy}</a><a href="/terms.html">${t.nav.terms}</a><a href="/legal.html${lang === 'es' ? '#es' : ''}">${t.nav.legal}</a></nav></div></footer>`
 }
 
 const appJson = (lang) => ({
@@ -865,7 +865,7 @@ for (const paths of [...Object.values(PAGES), ...Object.values(COMPARE).map((c) 
     urls.push(`<url><loc>${SITE + paths[lang]}</loc><lastmod>${TODAY}</lastmod>${alts}</url>`)
   }
 }
-for (const p of ['/', '/terms.html']) urls.push(`<url><loc>${SITE + p}</loc></url>`)
+for (const p of ['/', '/terms.html', '/delete.html', '/legal.html']) urls.push(`<url><loc>${SITE + p}</loc></url>`)
 writeFileSync(join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.join('\n')}

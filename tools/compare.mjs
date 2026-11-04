@@ -5,6 +5,13 @@
 // Before changing a line about another app, check it again and move CHECKED.
 export const CHECKED = '2026-10-26'
 
+// What Quilt itself sends, as its privacy policy says (index.html). One text for the data rows of every
+// comparison, so they cannot drift apart. The other apps' cells are not touched when this changes.
+const QUILT_DATA = {
+  en: "No analytics SDK of its own. Purchases are checked with RevenueCat, a habit leaves the phone only if you share it with friends, and the free version's banner ad (Google AdMob) receives device identifiers, app interactions and diagnostics; Pro removes it",
+  es: 'Sin SDK de analítica propio. Las compras se comprueban con RevenueCat, un hábito solo sale del móvil si lo compartes con amigos, y el banner de anuncios de la versión gratis (Google AdMob) recibe identificadores del dispositivo, interacciones con la app y diagnóstico; Pro lo quita',
+}
+
 export const S = {
   habiticaUs: ['Habitica on the App Store (US)', 'https://apps.apple.com/us/app/habitica-gamified-taskmanager/id994882113'],
   habiticaEs: ['Habitica en la App Store (España)', 'https://apps.apple.com/es/app/id994882113'],
@@ -45,28 +52,28 @@ export const S = {
 export const HUB = {
   en: {
     path: '/alternatives/',
-    title: 'Habit Tracker Apps Compared: No Subscription, No Ads, One-Time Price',
-    desc: 'Which habit tracker apps have no subscription, no ads or a one-time purchase? Quilt, Streaks, Loop, HabitKit and Habitica compared on price, accounts and platforms.',
+    title: 'Habit Tracker Apps Compared: Subscription, Ads, One-Time Price',
+    desc: 'Which habit tracker apps have a subscription, ads or a one-time purchase? Quilt, Streaks, Loop, HabitKit and Habitica compared on price, accounts and platforms.',
     h1: 'Habit tracker apps compared',
-    lede: 'Looking for a habit tracker app with no subscription, no ads or a one-time purchase? Here are five side by side, with what we could confirm on October 26, 2026. Loop is free. Streaks and Quilt Pro can be bought once, and HabitKit has a Lifetime plan. Habitica is free with an optional subscription. Quilt, Streaks, Loop and HabitKit have no ads; Google Play marks Habitica "Contains ads".',
+    lede: 'Looking for a habit tracker app with no subscription, no ads or a one-time purchase? Here are five side by side, with what we could confirm on October 26, 2026. Loop is free. Streaks and Quilt Pro can be bought once, and HabitKit has a Lifetime plan. Habitica is free with an optional subscription. Streaks, Loop and HabitKit have no ads; Quilt is free with one banner ad that Pro removes; Google Play marks Habitica "Contains ads".',
     tableH: 'The five apps side by side',
     quilt: {
       line: 'A habit tracker with a full-year grid for each habit, skipped days, free widgets and no account. Suits you if you want something quiet on Android and iPhone.',
-      price: 'Free for 3 habits. Pro: $3.99 once or $1.99 a month',
+      price: 'Free for 3 habits, with a banner ad that Pro removes. Pro: $3.99 once or $1.99 a month',
       account: 'None',
       platforms: 'Android, iPhone',
     },
   },
   es: {
     path: '/es/alternativas/',
-    title: 'Apps de hábitos comparadas: sin suscripción, sin anuncios',
-    desc: '¿Qué apps de hábitos no tienen suscripción ni anuncios, o se compran una sola vez? Quilt, Streaks, Loop, HabitKit y Habitica, comparadas en precio, cuenta y plataformas.',
+    title: 'Apps de hábitos comparadas: suscripción, anuncios, pago único',
+    desc: '¿Qué apps de hábitos tienen suscripción, anuncios o pago único? Quilt, Streaks, Loop, HabitKit y Habitica, comparadas en precio, cuenta y plataformas.',
     h1: 'Apps de hábitos comparadas',
-    lede: '¿Buscas una app de hábitos sin suscripción, sin anuncios o de pago único? Aquí tienes cinco, lado a lado, con lo que pudimos confirmar el 26 de octubre de 2026. Loop es gratis. Streaks y Quilt Pro se pueden comprar una sola vez, y HabitKit tiene un plan Lifetime. Habitica es gratis con una suscripción opcional. Quilt, Streaks, Loop y HabitKit no tienen anuncios; Google Play marca Habitica con "Contiene anuncios".',
+    lede: '¿Buscas una app de hábitos sin suscripción, sin anuncios o de pago único? Aquí tienes cinco, lado a lado, con lo que pudimos confirmar el 26 de octubre de 2026. Loop es gratis. Streaks y Quilt Pro se pueden comprar una sola vez, y HabitKit tiene un plan Lifetime. Habitica es gratis con una suscripción opcional. Streaks, Loop y HabitKit no tienen anuncios; Quilt es gratis con un banner de anuncios que Pro quita; Google Play marca Habitica con "Contiene anuncios".',
     tableH: 'Las cinco apps, lado a lado',
     quilt: {
       line: 'Una app de hábitos con una rejilla del año entero para cada hábito, días saltados, widgets gratis y sin cuenta. Te va si quieres algo tranquilo en Android y iPhone.',
-      price: 'Gratis con 3 hábitos. Pro: 4,99 € una vez o 2,49 € al mes',
+      price: 'Gratis con 3 hábitos, con un banner de anuncios que Pro quita. Pro: 4,99 € una vez o 2,49 € al mes',
       account: 'Ninguna',
       platforms: 'Android, iPhone',
     },
@@ -99,12 +106,12 @@ export const COMPARE = {
         ['Game and parties', '- None: no game and no social features', '+ Parties, challenges, pets, quests and seasonal events'],
         ['Missing a day', 'Skipped days: press and hold a day and it counts as neither a miss nor a win', 'Missed Dailies cost HP; a "Pause Damage" button in Settings stops that for all of them'],
         ['Repeats and targets', '+ Daily targets (8 glasses, 30 minutes) and weekly targets (N days a week), with streaks counted in days or weeks', '+ Dailies that repeat daily, weekly or monthly, and Habits you can tap several times a day, with streak counters'],
-        ['Account', '+ Not needed: the only connection is to process a purchase', 'An online account: registration, login and sync'],
+        ['Account', '+ Not needed: Quilt connects to the internet to check purchases and, in the free version, to show a banner ad', 'An online account: registration, login and sync'],
         ['Sync and web', '- No sync between devices and no web app', '+ Syncs across devices; also on the web and on Wear OS'],
         ['Widgets and reminders', '+ Interactive widgets in three sizes and one reminder time per habit, all free', '+ Google Play lists reminders and widgets'],
         ['Export', '+ The whole history as JSON (and back in), plus CSV, free', '+ Task history as CSV, user data as JSON or XML, from Settings'],
-        ['Ads', '+ None', 'Google Play marks it "Contains ads"'],
-        ['Data collected', '+ No usage analytics', 'App Store privacy label, "Data Linked to You": Contact Info, User Content, Usage Data, Diagnostics'],
+        ['Ads', 'A banner in the free version; Pro removes it', 'Google Play marks it "Contains ads"'],
+        ['Data collected', QUILT_DATA.en, 'App Store privacy label, "Data Linked to You": Contact Info, User Content, Usage Data, Diagnostics'],
         ['Price', 'Free for 3 habits. Pro: $3.99 once or $1.99 a month', 'Free to use. Optional subscription: $4.99 a month or $47.99 a year on the US App Store'],
         ['Platforms', 'Android, iPhone', 'Android, iPhone, iPad, Wear OS, web'],
       ],
@@ -118,7 +125,7 @@ export const COMPARE = {
       faq: [
         ['Is Habitica free?', 'Yes. Its App Store page says it can be fully enjoyed for free, and the subscription is optional. On October 26, 2026 the US App Store listed it at $4.99 for 1 month and $47.99 for 12 months, with gem packs as separate purchases from $0.99. Quilt is free for 3 habits, and Pro is $3.99 once or $1.99 a month.'],
         ['Is Habitica open source?', 'Yes. Its code is GPL v3 licensed, and so is the Android app; its art and some other assets have different licences. Loop Habit Tracker is another free, open source option, on Android only.'],
-        ['Is there a Habitica alternative with no account?', 'Quilt has no account and no sign-up. Everything lives in a file on your phone, and its only connection is to process a purchase. Habitica is an online service with registration, login and sync, so it works differently.'],
+        ['Is there a Habitica alternative with no account?', 'Quilt does not need an account or a sign-up. Everything lives in a file on your phone; it connects to the internet to check purchases and, in the free version, to show a banner ad. Habitica is an online service with registration, login and sync, so it works differently.'],
         ["Can I move my Habitica data to Quilt?", "Not automatically. Habitica exports your task history as CSV and your user data as JSON or XML from Settings, but Quilt imports only its own JSON backup and cannot read other apps' files. If you want past days in Quilt, you can tap them on the year grid."],
       ],
       hub: {
@@ -150,12 +157,12 @@ export const COMPARE = {
         ['Juego y grupos', '- Nada: ni juego ni funciones sociales', '+ Grupos, desafíos, mascotas, misiones y eventos de temporada'],
         ['Si un día no marcas', 'Días saltados: mantén pulsado un día y no cuenta ni como fallo ni como acierto', 'Las Diarias falladas restan puntos de vida; un botón "Pause Damage" en Ajustes lo evita en todas a la vez'],
         ['Repeticiones y objetivos', '+ Objetivos diarios (8 vasos, 30 minutos) y semanales (N días a la semana), con rachas contadas en días o en semanas', '+ Diarias que se repiten cada día, semana o mes, y Hábitos que puedes pulsar varias veces al día, con contadores de racha'],
-        ['Cuenta', '+ No hace falta: la única conexión es para procesar una compra', 'Una cuenta en línea: registro, inicio de sesión y sincronización'],
+        ['Cuenta', '+ No hace falta: Quilt se conecta a internet para comprobar compras y, en la versión gratis, para mostrar un banner de anuncios', 'Una cuenta en línea: registro, inicio de sesión y sincronización'],
         ['Sincronización y web', '- Sin sincronización entre dispositivos y sin app web', '+ Sincroniza entre dispositivos; también en la web y en Wear OS'],
         ['Widgets y recordatorios', '+ Widgets interactivos en tres tamaños y una hora de recordatorio por hábito, todo gratis', '+ Google Play indica recordatorios y widgets'],
         ['Exportar', '+ Todo el historial en JSON (y para volver a importarlo) y en CSV, gratis', '+ Historial de tareas en CSV y datos de usuario en JSON o XML, desde Ajustes'],
-        ['Anuncios', '+ Ninguno', 'Google Play la marca con "Contiene anuncios"'],
-        ['Datos que recoge', '+ Sin analítica de uso', 'Etiqueta de privacidad de la App Store, datos vinculados a ti: información de contacto, contenido del usuario, datos de uso y diagnósticos'],
+        ['Anuncios', 'Un banner en la versión gratis; Pro lo quita', 'Google Play la marca con "Contiene anuncios"'],
+        ['Datos que recoge', QUILT_DATA.es, 'Etiqueta de privacidad de la App Store, datos vinculados a ti: información de contacto, contenido del usuario, datos de uso y diagnósticos'],
         ['Precio', 'Gratis con 3 hábitos. Pro: 4,99 € una vez o 2,49 € al mes', 'Gratis. Suscripción opcional: 5,49 € al mes o 53,99 € al año en la App Store de España'],
         ['Plataformas', 'Android, iPhone', 'Android, iPhone, iPad, Wear OS, web'],
       ],
@@ -169,7 +176,7 @@ export const COMPARE = {
       faq: [
         ['¿Habitica es gratis?', 'Sí. Su ficha de la App Store dice que se puede disfrutar entera gratis, y la suscripción es opcional. El 26 de octubre de 2026, la App Store de España la listaba a 5,49 € por 1 mes y 53,99 € por 12 meses, y los paquetes de gemas son compras aparte, desde 0,99 €. Quilt es gratis con 3 hábitos, y Pro cuesta 4,99 € una vez o 2,49 € al mes.'],
         ['¿Habitica es de código abierto?', 'Sí. Su código tiene licencia GPL v3, y la app de Android también; las ilustraciones y algunos otros recursos tienen otras licencias. Loop Habit Tracker es otra opción gratis y de código abierto, solo para Android.'],
-        ['¿Hay una alternativa a Habitica sin cuenta?', 'Quilt no tiene cuenta ni registro. Todo vive en un archivo en tu móvil y su única conexión es para procesar una compra. Habitica es un servicio en línea con registro, inicio de sesión y sincronización, así que funciona de otra manera.'],
+        ['¿Hay una alternativa a Habitica sin cuenta?', 'Quilt no necesita cuenta ni registro. Todo vive en un archivo en tu móvil; se conecta a internet para comprobar compras y, en la versión gratis, para mostrar un banner de anuncios. Habitica es un servicio en línea con registro, inicio de sesión y sincronización, así que funciona de otra manera.'],
         ['¿Puedo pasar mis datos de Habitica a Quilt?', 'No de forma automática. Habitica exporta tu historial de tareas en CSV y tus datos de usuario en JSON o XML desde Ajustes, pero Quilt solo importa su propia copia en JSON y no puede leer archivos de otras apps. Si quieres tus días pasados en Quilt, puedes pulsarlos en la rejilla del año.'],
       ],
       hub: {
@@ -206,7 +213,7 @@ export const COMPARE = {
         ['Platforms', 'Android, iPhone', 'iPhone, iPad, Apple Watch, Mac and Apple Vision Pro; no Android version'],
         ['Price', 'Free for 3 habits. Pro: $3.99 once or $1.99 a month', '$5.99 once on the US App Store, with no subscription'],
         ['How many habits', 'Free: 3. Pro: unlimited', 'Up to 24 tasks'],
-        ['Account and ads', '+ None of either', '+ None of either'],
+        ['Account and ads', 'No account needed. One banner ad in the free version; Pro removes it', '+ None of either'],
         ['Widgets', '+ Interactive, in three sizes, free, on both platforms; on iPhone also on the lock screen', '+ Home Screen and interactive widgets, and timers on the Lock Screen'],
         ['Apple Health', '- No', '+ Tasks can link to Health and complete themselves'],
         ['Apple Watch and Mac', '- No Apple Watch app and no web app', '+ Apple Watch, Mac and Vision Pro apps'],
@@ -214,7 +221,7 @@ export const COMPARE = {
         ['Skipped days', 'Press and hold a day: it counts as neither a miss nor a win and the streak stays', 'Vacation Mode records paused days as skipped so the streak can resume'],
         ['Targets and streak rules', 'Counted habits with a daily target (8 glasses, 30 minutes); N days a week, counted in weeks', 'Tasks due on set weekdays, N times a day, N days a week, every N days, or week, month and year goals'],
         ['Export', '+ The whole history as JSON, plus CSV, free', '+ CSV and a .streaks backup file; imports from other apps by CSV'],
-        ['Data the app sends', 'Only the connection to process a purchase; no usage analytics', 'Crash reports go to Sentry, with no setting to turn them off, per its privacy policy. App Store label: "Data Not Linked to You: Diagnostics"'],
+        ['Data the app sends', QUILT_DATA.en, 'Crash reports go to Sentry, with no setting to turn them off, per its privacy policy. App Store label: "Data Not Linked to You: Diagnostics"'],
       ],
       betterH: 'Where Streaks is the better pick',
       better: [
@@ -258,7 +265,7 @@ export const COMPARE = {
         ['Plataformas', 'Android, iPhone', 'iPhone, iPad, Apple Watch, Mac y Apple Vision Pro; sin versión para Android'],
         ['Precio', 'Gratis con 3 hábitos. Pro: 4,99 € una vez o 2,49 € al mes', '6,99 € una vez en la App Store de España, sin suscripción'],
         ['Cuántos hábitos', 'Gratis: 3. Pro: ilimitados', 'Hasta 24 tareas'],
-        ['Cuenta y anuncios', '+ Ninguna de las dos cosas', '+ Ninguna de las dos cosas'],
+        ['Cuenta y anuncios', 'No hace falta cuenta. Un banner de anuncios en la versión gratis; Pro lo quita', '+ Ninguna de las dos cosas'],
         ['Widgets', '+ Interactivos, en tres tamaños, gratis, en las dos plataformas; en iPhone, también en la pantalla de bloqueo', '+ Widgets en la pantalla de inicio e interactivos, y temporizadores en la pantalla de bloqueo'],
         ['Apple Health', '- No', '+ Las tareas pueden enlazar con Salud y completarse solas'],
         ['Apple Watch y Mac', '- Sin app para Apple Watch ni app web', '+ Apps para Apple Watch, Mac y Vision Pro'],
@@ -266,7 +273,7 @@ export const COMPARE = {
         ['Días saltados', 'Mantén pulsado un día: no cuenta ni como fallo ni como acierto y la racha sigue', 'El modo vacaciones (Vacation Mode) registra los días en pausa como saltados para que la racha pueda continuar'],
         ['Objetivos y reglas de racha', 'Hábitos con contador y objetivo diario (8 vasos, 30 minutos); N días a la semana, con la racha contada en semanas', 'Tareas en días de la semana fijos, N veces al día, N días a la semana, cada N días, u objetivos de semana, mes y año'],
         ['Exportar', '+ Todo el historial en JSON y en CSV, gratis', '+ CSV y una copia .streaks; importa desde otras apps por CSV'],
-        ['Datos que envía la app', 'Solo la conexión para procesar una compra; sin analítica de uso', 'Los informes de fallos van a Sentry y no hay ajuste para desactivarlos, según su política de privacidad. Etiqueta de la App Store: datos no vinculados a ti, diagnósticos'],
+        ['Datos que envía la app', QUILT_DATA.es, 'Los informes de fallos van a Sentry y no hay ajuste para desactivarlos, según su política de privacidad. Etiqueta de la App Store: datos no vinculados a ti, diagnósticos'],
       ],
       betterH: 'Cuándo es mejor Streaks',
       better: [
@@ -315,7 +322,7 @@ export const COMPARE = {
         ['Platforms', 'Android, iPhone', 'Android only: Google Play and F-Droid, with no official iPhone app'],
         ['Price', 'Free for 3 habits. Pro: $3.99 once or $1.99 a month', 'Free: every feature for everyone, with no in-app purchases'],
         ['Habits', 'Free: 3. Pro: unlimited', '+ No limit'],
-        ['Account and ads', '+ None of either', '+ None of either'],
+        ['Account and ads', 'No account needed. One banner ad in the free version; Pro removes it', '+ None of either'],
         ['How history looks', 'A full-year grid for each habit: one square per day, months labeled', 'History charts you can scroll back through'],
         ['Skipped days', '+ Press and hold a day: neither a miss nor a win, and the streak stays', '+ Skips, and a habit score built so a few missed days do not wipe out your progress'],
         ['Schedules and targets', '+ Daily targets (8 glasses, 30 minutes) and N days a week, counted in weeks', '+ Schedules such as "3 times per week" or every other day, and measurable habits'],
@@ -323,7 +330,7 @@ export const COMPARE = {
         ['Widgets', '+ Interactive, in three sizes, free; lock screen widgets on iPhone, a quick settings tile on Android', '+ Widgets'],
         ['Export', '+ The whole history as JSON, plus CSV', '+ CSV and SQLite'],
         ['Sync', '- None between devices', '- None: your data stays on the phone'],
-        ['Data collected', '+ No usage analytics; the only connection is to process a purchase', '+ Google Play Data safety says no data is collected'],
+        ['Data collected', QUILT_DATA.en, '+ Google Play Data safety says no data is collected'],
       ],
       betterH: 'Where Loop Habit Tracker is the better pick',
       better: [
@@ -367,7 +374,7 @@ export const COMPARE = {
         ['Plataformas', 'Android, iPhone', 'Solo Android: Google Play y F-Droid, sin app oficial para iPhone'],
         ['Precio', 'Gratis con 3 hábitos. Pro: 4,99 € una vez o 2,49 € al mes', 'Gratis: todas las funciones para todo el mundo, sin compras dentro de la app'],
         ['Hábitos', 'Gratis: 3. Pro: ilimitados', '+ Sin límite'],
-        ['Cuenta y anuncios', '+ Ninguna de las dos cosas', '+ Ninguna de las dos cosas'],
+        ['Cuenta y anuncios', 'No hace falta cuenta. Un banner de anuncios en la versión gratis; Pro lo quita', '+ Ninguna de las dos cosas'],
         ['Cómo se ve el historial', 'Una rejilla del año entero para cada hábito: un cuadrado por día, con los meses rotulados', 'Gráficos de historial por los que puedes retroceder'],
         ['Días saltados', '+ Mantén pulsado un día: no cuenta ni como fallo ni como acierto y la racha sigue', '+ Saltos, y una puntuación de hábito pensada para que unos días sin marcar no borren tu progreso'],
         ['Frecuencias y objetivos', '+ Objetivos diarios (8 vasos, 30 minutos) y N días a la semana, contados en semanas', '+ Frecuencias como "3 veces por semana" o un día sí y otro no, y hábitos medibles'],
@@ -375,7 +382,7 @@ export const COMPARE = {
         ['Widgets', '+ Interactivos, en tres tamaños, gratis; en iPhone, también en la pantalla de bloqueo; en Android, un mosaico de ajustes rápidos', '+ Widgets'],
         ['Exportar', '+ Todo el historial en JSON y en CSV', '+ CSV y SQLite'],
         ['Sincronización', '- Ninguna entre dispositivos', '- Ninguna: tus datos se quedan en el móvil'],
-        ['Datos que recoge', '+ Sin analítica de uso; la única conexión es para procesar una compra', '+ La sección de seguridad de los datos de Google Play indica que no recopila datos'],
+        ['Datos que recoge', QUILT_DATA.es, '+ La sección de seguridad de los datos de Google Play indica que no recopila datos'],
       ],
       betterH: 'Cuándo es mejor Loop Habit Tracker',
       better: [
@@ -412,7 +419,7 @@ export const COMPARE = {
       fitUs: [
         'You want home screen widgets without paying: every widget in Quilt is free.',
         'You want skipped days that do not break a streak, and export to CSV as well as JSON.',
-        'You want an app with no usage analytics: Quilt makes no connection except to process a purchase.',
+        'You want no usage analytics at all: Quilt has none of its own, and Pro removes the banner ad, the only part that collects usage data.',
       ],
       fitThem: [
         'You keep 4 habits and want all of them free.',
@@ -431,8 +438,8 @@ export const COMPARE = {
         ['Reminders', 'One time per habit, respecting the scheduled days', 'One per habit free; up to three per habit with Pro'],
         ['Export', '+ The whole history as JSON, plus CSV, free', '+ One JSON file, free; no CSV'],
         ['Backup and sync', '- No sync between devices; your export file is the backup', '- No automatic sync between devices; daily on-device backups and, on iPhone, a daily iCloud backup'],
-        ['Account and ads', '+ None of either', '+ None of either'],
-        ['Usage analytics', '+ None', 'Anonymized usage tracking since version 1.18.1, per its privacy policy'],
+        ['Account and ads', 'No account needed. One banner ad in the free version; Pro removes it', '+ None of either'],
+        ['Usage analytics', "None of its own. The free version's banner ad (Google AdMob) receives app interactions and diagnostics; Pro removes it", 'Anonymized usage tracking since version 1.18.1, per its privacy policy'],
       ],
       betterH: 'Where HabitKit is the better pick',
       better: [
@@ -464,7 +471,7 @@ export const COMPARE = {
       fitUs: [
         'Quieres widgets en la pantalla de inicio sin pagar: todos los de Quilt son gratis.',
         'Quieres días saltados que no rompan la racha, y exportar a CSV además de JSON.',
-        'Quieres una app sin analítica de uso: Quilt no se conecta a nada salvo para procesar una compra.',
+        'Quieres cero analítica de uso: Quilt no tiene analítica propia, y Pro quita el banner de anuncios, que es lo único que recoge datos de uso.',
       ],
       fitThem: [
         'Llevas 4 hábitos y quieres tenerlos todos gratis.',
@@ -483,8 +490,8 @@ export const COMPARE = {
         ['Recordatorios', 'Una hora por hábito, respetando los días programados', 'Uno por hábito gratis; hasta tres por hábito con Pro'],
         ['Exportar', '+ Todo el historial en JSON y en CSV, gratis', '+ Un archivo JSON, gratis; sin CSV'],
         ['Copia y sincronización', '- Sin sincronización entre dispositivos; tu archivo exportado es la copia', '- Sin sincronización automática entre dispositivos; copias diarias en el dispositivo y, en iPhone, una copia diaria en iCloud'],
-        ['Cuenta y anuncios', '+ Ninguna de las dos cosas', '+ Ninguna de las dos cosas'],
-        ['Analítica de uso', '+ Ninguna', 'Seguimiento de uso anonimizado desde la versión 1.18.1, según su política de privacidad'],
+        ['Cuenta y anuncios', 'No hace falta cuenta. Un banner de anuncios en la versión gratis; Pro lo quita', '+ Ninguna de las dos cosas'],
+        ['Analítica de uso', 'Ninguna propia. El banner de anuncios de la versión gratis (Google AdMob) recibe interacciones con la app y diagnóstico; Pro lo quita', 'Seguimiento de uso anonimizado desde la versión 1.18.1, según su política de privacidad'],
       ],
       betterH: 'Cuándo es mejor HabitKit',
       better: [

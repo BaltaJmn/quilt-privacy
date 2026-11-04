@@ -30,8 +30,9 @@ token.
 ## Positioning
 
 Quilt shows each habit as its whole year, 365 squares at once, so you see the month you slipped and the
-weeks you did not. Skipped days (ill, away, rest) do not break the streak. No account, no ads, no analytics;
-the free version has three habits, every widget and the full export.
+weeks you did not. Skipped days (ill, away, rest) do not break the streak. No account needed and no analytics of
+its own; the free version has three habits, every widget and the full export, and shows one banner ad (Google
+AdMob) that Pro removes.
 
 ## Operating Context
 

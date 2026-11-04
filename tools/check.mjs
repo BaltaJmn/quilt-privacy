@@ -23,6 +23,7 @@ for (const url of locs) {
   if (!og || !existsSync(join(root, og.replace(site, '')))) fail.push(`${url}: og image`)
   if ((html.match(/<h1[\s>]/g) || []).length !== 1) fail.push(`${url}: one h1`)
   if (/[—–“”‘’…→•× ]/.test(html)) fail.push(`${url}: non-ASCII punctuation`)
+  if (!html.includes('href="/legal.html')) fail.push(`${url}: no link to the legal notice`)
   pages[url] = Object.fromEntries([...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => [m[1], m[2]]))
   for (const m of html.matchAll(/(?:href|src)="(\/[^"?#]*)/g)) {
     const p = m[1].endsWith('/') ? m[1] + 'index.html' : m[1]
@@ -36,6 +37,25 @@ for (const [url, alts] of Object.entries(pages)) {
     else if (!Object.values(pages[href]).includes(url)) fail.push(`${url}: hreflang ${lang} not reciprocal`)
   }
 }
+// The pages written by hand (policy, terms, delete page, legal notice) and app-ads.txt: they exist, the sitemap
+// lists them, every local link resolves and each one links to the legal notice. The policy keeps the curly quotes
+// of its first version, so only the other three are checked for ASCII punctuation.
+for (const f of ['index.html', 'terms.html', 'delete.html', 'legal.html']) {
+  const file = join(root, f)
+  if (!existsSync(file)) { fail.push(`${f}: no file`); continue }
+  const html = readFileSync(file, 'utf8')
+  const loc = f === 'index.html' ? site + '/' : `${site}/${f}`
+  if (!sitemap.includes(`<loc>${loc}</loc>`)) fail.push(`${f}: not in the sitemap`)
+  if (f !== 'index.html' && /[\u2014\u2013\u201C\u201D\u2018\u2019\u2026\u2192\u2022\u00D7\u00A0\u00AD\u200B]/.test(html)) fail.push(`${f}: non-ASCII punctuation`)
+  if (f !== 'legal.html' && !html.includes('href="/legal.html')) fail.push(`${f}: no link to the legal notice`)
+  for (const m of html.matchAll(/(?:href|src)="(\/[^"?#]*)/g)) {
+    const p = m[1].endsWith('/') ? m[1] + 'index.html' : m[1]
+    if (!existsSync(join(root, p))) fail.push(`${f}: broken ${m[1]}`)
+  }
+}
+const adsTxt = existsSync(join(root, 'app-ads.txt')) ? readFileSync(join(root, 'app-ads.txt'), 'utf8') : ''
+if (adsTxt.trim() !== 'google.com, pub-1605179202100483, DIRECT, f08c47fec0942fa0') fail.push('app-ads.txt: missing or not the AdMob publisher line')
+if (/Disallow:\s*\/(app-ads\.txt)?\s*$/m.test(readFileSync(join(root, 'robots.txt'), 'utf8'))) fail.push('robots.txt: blocks app-ads.txt')
 const days = (y) => Array.from({ length: 12 }, (_, m) => new Date(Date.UTC(y, m + 1, 0)).getUTCDate()).reduce((a, b) => a + b)
 if (existsSync(join(root, 'qt/sheets/en-chain-a4.svg'))) {
   const cells = (readFileSync(join(root, 'qt/sheets/en-chain-a4.svg'), 'utf8').match(/class="c"/g) || []).length

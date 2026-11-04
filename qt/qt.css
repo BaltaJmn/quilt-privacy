@@ -1,5 +1,6 @@
 /* Quilt web: printables, online tracker and comparisons. The page is a quilt being pieced: cotton patches in
-   the app's eight pastels, sewn with a dashed running stitch, on the app's cream backing. */
+   the app's eight pastels, sewn with a dashed running stitch, on the app's cream backing.
+   Caprasimo (caprasimo.woff2, a subset) is under the SIL Open Font License 1.1: copyright and licence in /qt/OFL.txt. */
 @font-face {
   font-family: Caprasimo;
   src: url(/qt/caprasimo.woff2) format('woff2');
