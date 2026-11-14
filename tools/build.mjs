@@ -360,7 +360,7 @@ document.querySelectorAll('[data-store="apple"]').forEach(function(e){var x=new 
 function footer(lang) {
   const t = T[lang]
   return `<footer><div class="wrap"><span>${esc(t.footer)}</span><nav aria-label="${esc(t.nav.privacy)}">
-<a href="${PAGES.print[lang]}">${t.nav.print}</a><a href="${PAGES.maker[lang]}">${t.nav.maker}</a>${PAGES.hub[lang] ? `<a href="${PAGES.hub[lang]}">${t.nav.hub}</a>` : ''}<a href="/${lang === 'es' ? '#es' : ''}">${t.nav.privacy}</a><a href="/terms.html">${t.nav.terms}</a><a href="/legal.html${lang === 'es' ? '#es' : ''}">${t.nav.legal}</a></nav></div></footer>`
+<a href="${PAGES.print[lang]}">${t.nav.print}</a><a href="${PAGES.maker[lang]}">${t.nav.maker}</a>${PAGES.hub[lang] ? `<a href="${PAGES.hub[lang]}">${t.nav.hub}</a>` : ''}<a href="/${lang === 'es' ? '#es' : ''}">${t.nav.privacy}</a><a href="/terms.html">${t.nav.terms}</a><a href="/legal.html${lang === 'es' ? '#es' : ''}">${t.nav.legal}</a><a href="https://testers.baltajmn.dev/${lang === 'es' ? 'es/' : ''}">Test4Test: 12 testers</a></nav></div></footer>`
 }
 
 const appJson = (lang) => ({
